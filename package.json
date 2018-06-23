@@ -1,0 +1,22 @@
+{
+  "name": "connect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "dependencies": {
+    "aws-sdk": "^2.263.1",
+    "firebase-admin": "^5.12.1",
+    "node-uuid": "^1.4.8",
+    "ramman-z-log": "^1.0.149"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.7",
+    "serverless-offline": "^3.25.4",
+    "serverless-plugin-typescript": "^1.1.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
