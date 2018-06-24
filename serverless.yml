@@ -22,6 +22,7 @@ provider:
   runtime: nodejs8.10
   region: eu-west-1
   stage: dev
+  role: arn:aws:iam::222322594734:role/lambda_basic_execution # Overwrite the default IAM role which is used for all functions
 
 
 # you can overwrite defaults here
@@ -59,8 +60,14 @@ provider:
 
 functions:
   connect-freeform:
+#    name: ${self:provider.stage}-lambdaName # optional, Deployed Lambda name
+#    description: My function # The description of your function.
+#    runtime: nodejs8.10 # Used for this function
+#    role: arn:aws:iam::222322594734:role/lambda_basic_execution # Overwrite the default IAM role which is used for this function
     handler: src/connect_freeform.handler
-    memorySize: 512 # function specific
+    memorySize: 1024 # function specific
+    timeout: 30 # The default is 6 seconds. Note: API Gateway current maximum is 30 seconds
+    logRetentionInDays: 14 # Set the default RetentionInDays for a CloudWatch LogGroup
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events

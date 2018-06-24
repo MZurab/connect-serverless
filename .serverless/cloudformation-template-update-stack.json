@@ -11,80 +11,6 @@
         "LogGroupName": "/aws/lambda/connect-dev-connect-freeform"
       }
     },
-    "IamRoleLambdaExecution": {
-      "Type": "AWS::IAM::Role",
-      "Properties": {
-        "AssumeRolePolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Principal": {
-                "Service": [
-                  "lambda.amazonaws.com"
-                ]
-              },
-              "Action": [
-                "sts:AssumeRole"
-              ]
-            }
-          ]
-        },
-        "Policies": [
-          {
-            "PolicyName": {
-              "Fn::Join": [
-                "-",
-                [
-                  "dev",
-                  "connect",
-                  "lambda"
-                ]
-              ]
-            },
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Effect": "Allow",
-                  "Action": [
-                    "logs:CreateLogStream"
-                  ],
-                  "Resource": [
-                    {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/connect-dev-connect-freeform:*"
-                    }
-                  ]
-                },
-                {
-                  "Effect": "Allow",
-                  "Action": [
-                    "logs:PutLogEvents"
-                  ],
-                  "Resource": [
-                    {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/connect-dev-connect-freeform:*:*"
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        ],
-        "Path": "/",
-        "RoleName": {
-          "Fn::Join": [
-            "-",
-            [
-              "connect",
-              "dev",
-              "eu-west-1",
-              "lambdaRole"
-            ]
-          ]
-        }
-      }
-    },
     "ConnectDashfreeformLambdaFunction": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
@@ -92,33 +18,27 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/connect/dev/1529769401411-2018-06-23T15:56:41.411Z/connect.zip"
+          "S3Key": "serverless/connect/dev/1529843719079-2018-06-24T12:35:19.079Z/connect.zip"
         },
         "FunctionName": "connect-dev-connect-freeform",
         "Handler": "src/connect_freeform.handler",
-        "MemorySize": 512,
-        "Role": {
-          "Fn::GetAtt": [
-            "IamRoleLambdaExecution",
-            "Arn"
-          ]
-        },
+        "MemorySize": 1024,
+        "Role": "arn:aws:iam::222322594734:role/lambda_basic_execution",
         "Runtime": "nodejs8.10",
-        "Timeout": 6
+        "Timeout": 30
       },
       "DependsOn": [
-        "ConnectDashfreeformLogGroup",
-        "IamRoleLambdaExecution"
+        "ConnectDashfreeformLogGroup"
       ]
     },
-    "ConnectDashfreeformLambdaVersionQ544Gs6pChyBSUWiVmUqp81mdLMzYvul2gxxVaCnIw": {
+    "ConnectDashfreeformLambdaVersionBubadvwCRTezhqg3WIBvdbt5qQSi0DMJ51Sja89GEqQ": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ConnectDashfreeformLambdaFunction"
         },
-        "CodeSha256": "YrCCBEb9rSlM4CZ7N9gSQ5RYFHKujjuB29U4cuZdwts="
+        "CodeSha256": "wYWpNlj1QiDmW20wBrTewSTIoAOqklTmfxvxIoTKVpg="
       }
     }
   },
@@ -131,7 +51,7 @@
     "ConnectDashfreeformLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ConnectDashfreeformLambdaVersionQ544Gs6pChyBSUWiVmUqp81mdLMzYvul2gxxVaCnIw"
+        "Ref": "ConnectDashfreeformLambdaVersionBubadvwCRTezhqg3WIBvdbt5qQSi0DMJ51Sja89GEqQ"
       }
     }
   }
