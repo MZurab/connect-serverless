@@ -17,6 +17,7 @@ service: connect
 # Check out our docs for more details
 # frameworkVersion: "=1.0.1"
 
+
 provider:
   name: aws
   runtime: nodejs8.10
@@ -59,12 +60,22 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
-  connect-freeform:
-#    name: ${self:provider.stage}-lambdaName # optional, Deployed Lambda name
+  backend-freeform-submit:
+    handler: src/handler/freeform/backend/submit.handler
+    memorySize: 1024 # function specific
+    timeout: 30 # The default is 6 seconds. Note: API Gateway current maximum is 30 seconds
+    logRetentionInDays: 14 # Set the default RetentionInDays for a CloudWatch LogGroup
+#    Check the event documentation for details
+    events:
+      - sns: arn:aws:sns:eu-west-1:222322594734:freeform-submit-form #freeform-submit-form
+
+
+  frontend-freeform-index-point:
+#    name: connect-freeform; #${self:provider.stage}-lambdaName # optional, Deployed Lambda name
 #    description: My function # The description of your function.
 #    runtime: nodejs8.10 # Used for this function
 #    role: arn:aws:iam::222322594734:role/lambda_basic_execution # Overwrite the default IAM role which is used for this function
-    handler: src/connect_freeform.handler
+    handler: src/handler/freeform/frontend.handler
     memorySize: 1024 # function specific
     timeout: 30 # The default is 6 seconds. Note: API Gateway current maximum is 30 seconds
     logRetentionInDays: 14 # Set the default RetentionInDays for a CloudWatch LogGroup
@@ -113,3 +124,12 @@ functions:
 #     NewOutput:
 #       Description: "Description for the output"
 #       Value: "Some output value"
+
+#plugins:
+#  - serverless-plugin-typescript
+##  - serverless-offline
+#
+#package:
+#  exclude:
+#  include:
+#    - src/**/*

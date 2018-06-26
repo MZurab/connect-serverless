@@ -13,132 +13,21 @@ const FreeformElementReference   = require('./_sub/Element/FreeformElementRefere
 const FreeformShared    = require('./_sub/FreeformShared').FreeformShared;
 const AccessList        = require('./_sub/AccessList/AccessList').AccessList;
 const FreeformStepper   = require('./_sub/Stepper/FreeformStepper').FreeformStepper;
-
-
+const SNS               = require("./../aws/sns"); // {'body':true}
 
 
 const _ = {};
 
-
-
-//@< MEMBER
-
-
-
-//
-// async function getFieldModelsFromFormObject (iNuserLogin, iNmodelId, iNformId) {
-//     /*
-//       @inputs
-//         @required
-//           iNuserLogin
-//           iNmodelId
-//     */
-//     // passed data
-//     let fname           = 'getFieldModelsFromFormObject',
-//         user            = iNuserLogin,
-//         modelId         = iNmodelId,
-//         formId          = iNformId;
-//
-//     LOG.fstep (fname, 1, 0,'INVOKE - user, model, formId', user, modelId, formId);
-//
-//
-//     const   pathToFireStoreDb   = `freeform/${iNuserLogin}/model/${modelId}/form/${formId}/field`,
-//             firestoreRef        = firestore().collection(pathToFireStoreDb);
-//
-//     LOG.fstep (fname, 1, 1,'will get  fields models of form model from path - ', pathToFireStoreDb);
-//     return new Promise(
-//         (resolve) => {
-//             firestoreRef.get().then(
-//                 (docs) => {
-//                     if ( !docs.empty ) {
-//                         LOG.fstep (fname, 1, 2,' fields models of form model is  exist - docs', docs.docs);
-//
-//                         let resultDocs = {};
-//
-//                         for (let doc of docs.docs) {
-//                             resultDocs[doc.id] = doc.data();
-//                         }
-//
-//                         resolve(resultDocs);
-//                         return;
-//                     }
-//
-//                     LOG.fstep (fname, 1, 3,'ERROR -  fields models of form model is not exist');
-//                     resolve(null);
-//                 }
-//             ).catch(
-//                 (error) => {
-//                     LOG.fstep (fname, 1, 4,'ERROR -  fields models of form model is not exist - error', error);
-//                     resolve(null)
-//                 }
-//             );
-//         }
-//     );
-// } _.getFieldModelsFromFormModel = getFieldModelsFromFormModel;
-
-
-
-// async function getAccessListsFromFormModel (iNuserLogin, iNmodelId) {
-//     /*
-//       @inputs
-//         @required
-//           iNuserLogin
-//           iNmodelId
-//     */
-//     // passed data
-//     let fname = 'getAccessListsFromFormModel',
-//         user            = iNuserLogin,
-//         model           = iNmodelId;
-//
-//     LOG.fstep (fname, 1, 0,'INVOKE - user, model, data', user, model);
-//
-//
-//     const   pathToFireStoreDb   = `/freeform/${iNuserLogin}/model/${model}/accessList`,
-//             firestoreRef        = firestore().collection(pathToFireStoreDb);
-//
-//     LOG.fstep (fname, 1, 1,'will get access list from path - ', pathToFireStoreDb);
-//     return new Promise(
-//         (resolve) => {
-//             firestoreRef.get().then(
-//                 (docs) => {
-//                     if ( !docs.empty ) {
-//                         LOG.fstep (fname, 1, 3,'access list is  exist');
-//
-//                         let resultDocs = {};
-//
-//                         for (let doc of docs.docs) {
-//                             resultDocs[doc.id] = doc.data();
-//                         }
-//
-//                         resolve(resultDocs);
-//                         return;
-//                     }
-//
-//                     LOG.fstep (fname, 1, 4,'ERROR - access list is not exist');
-//                     resolve(null);
-//                 }
-//             )
-//             .catch(
-//                 (error) => {
-//                     LOG.fstep (fname, 1, 5,'ERROR - access list is not exist');
-//                     resolve(null)
-//                 }
-//             );
-//         }
-//     );
-// } _.getAccessListsFromFormModel = getAccessListsFromFormModel;
-
-//@< check access
-
-
-
-    //@< for model
-
-    //@> for model
-
-//@> check access
-
 //@< function
+
+
+    async function runSubmitBackend(iNdata) {
+        //run backend
+        let tupic_arn = 'arn:aws:sns:eu-west-1:222322594734:freeform-submit-form';
+        let snsresult   = await SNS.sendMessage(iNdata, tupic_arn);
+
+        return snsresult;
+    }
 
     async function createFormObjectFromModel (iNformUser, iNmodelId, iNformId, iNclienUserData, iNfirestoreBatchGroup, iNfullDownloaded = false ) {
 
@@ -373,6 +262,208 @@ const _ = {};
 
 
 
+    async function backend_submitForm (iNformUser, iNmodelId, iNformId, iNclienUserData, iNfirestoreGroupBatch = null ) {
+        let fname       = 'backend_submitForm',
+            modelId     = iNmodelId,
+            formUser    = iNformUser,
+            formId      = iNformId,
+            cdata       = iNclienUserData,
+            firestoreGroupBatch,
+            notStepperUpdate,
+            stepResult;
+
+        if ( !iNfirestoreGroupBatch ) {
+            const   firestoreDb           = FIREBASE.getFirestoreDb();
+            firestoreGroupBatch   = FIREBASE.getGroupBatchFirestoreDb(firestoreDb);
+        } else {
+            firestoreGroupBatch   = iNfirestoreGroupBatch;
+        }
+
+        // we have initial data
+            LOG.fstep( fname, 1, 0, 'We need initial datas', 'formUser', formUser, 'modelId', modelId , 'cdata', cdata);
+
+        // get activated form modelId
+            const modelOfForm = await FreeformForm.Object.getObject( formUser, modelId, formId ); // { status: "activated" }
+
+            if (!modelOfForm) {
+                LOG.ferror( fname, 2, 1, 'ERROR END We has NOT object in db', modelOfForm);
+                return CONNECT.returnPromiseWithValue(null);
+            }
+
+        //We has this form in db -> check access to this db
+            LOG.fstep( fname, 2, 2, 'We has this form in db -> check access to this db', modelOfForm);
+
+        //@< check access
+            let hasAccess = await AccessList.Shared.checkListForAccessToFreeformObject ('submit', 'form', null, null, formUser, modelId, formId, modelOfForm, cdata);
+
+
+            if (!hasAccess) {
+                LOG.ferror(fname, 3, 1, "END ERROR - has not access for submit", hasAccess ); // modelOfForm
+                return CONNECT.returnPromiseWithValue(null);
+            }
+
+            LOG.fstep(fname, 3, 2, "step NEXT - we has access for submit -> load all elements",  hasAccess, cdata ); // modelOfForm
+        //@> check access
+
+        //@< LATER DELETE - WRITE TO USER TABLE
+            let db = FreeformElement.Db.isFormWithDb(modelOfForm), tableId;
+            if (db ) {
+                tableId = (modelId === 'work-article')? 'work-article' : 'article-site1';
+
+                LOG.fstep( fname, 5, 1, 'We has db -> get all fields', db, formUser, modelId, formId, modelId );
+                // we has db -> loading all sub elements
+                let loadResult = await FreeformElement.Object.loadElements(formUser, modelId, formId);
+                LOG.fstep( fname, 111, 1, 'loadResult', loadResult );
+
+                let tablepath = `/users/wideFormat24/table/${tableId}/row/${formId}`,
+                    thisFreeform = FreeformShared.getFreeform(formUser, modelId, formId);
+                LOG.fstep( fname, 111, 2, 'thisFreeform, global', thisFreeform, global['freeform'] );
+
+                let dbData = {};
+                dbData['name']      = '';
+                dbData['title']     = '';
+                dbData['status']    = 1;
+                if ( cdata['uid'] ) dbData['uid']       = cdata['uid'];
+                dbData['date']      = new Date();
+                dbData['blocks']    = [];
+
+                if ( tableId === 'work-article' ) {
+                    // if we have work-article -> add mini icon and text
+                    // g3
+                    let uploadImage = FreeformElementReference.getElementByPath(thisFreeform, 'gidIcon.$1(gl_f_uploadImage)'),
+                        text        = FreeformElementReference.getElementByPath(thisFreeform, 'gidIcon.$1(gl_f_textArea):body>value'),
+                        category    = FreeformElementReference.getElementByPath(thisFreeform, 'g0_r3_id2:body>value');
+
+                    if (uploadImage && Array.isArray(uploadImage.body.payload.options) && uploadImage.body.payload.options.length > 0 ) {
+                        dbData['icon'] = uploadImage.body.payload.options[0].path;
+                        dbData['text'] = text;
+                        dbData['category'] = category;
+                    }
+                }
+
+                {
+                    // g1 - g0_r1_id1 - name | date - g0_r3_id1 | title - g0_r2_id1
+                    let name    = FreeformElementReference.getElementByPath(thisFreeform, 'g0_r1_id1:body>value'),
+                        date    = FreeformElementReference.getElementByPath(thisFreeform, 'g0_r3_id1:body>value'),
+                        title   = FreeformElementReference.getElementByPath(thisFreeform, 'g0_r2_id1:body>value');
+
+                    if (name  ) {
+                        dbData['name'] = name;
+                    }
+                    if (date  ) {
+                        dbData['date'] = new Date( parseInt(date) );
+                    }
+                    if (title  ) {
+                        dbData['title'] = title;
+                    }
+
+                }
+                {
+                    // g3
+                    let uploadImage = FreeformElementReference.getElementByPath(thisFreeform, 'gid2.$1(gl_f_uploadImage)'),
+                        text        = FreeformElementReference.getElementByPath(thisFreeform, 'gid2.$1(gl_f_textArea):body>value');
+                    if (uploadImage && Array.isArray(uploadImage.body.payload.options) && uploadImage.body.payload.options.length > 0 ) {
+                        dbData['blocks'].push(
+                            {
+                                'type' : 'centerBigImage',
+                                'text' : text,
+                                weight: 1,
+                                image: [ uploadImage.body.payload.options[0].path ]
+                            }
+                        );
+                    }
+
+                }
+                {
+                    // g4
+                    let uploadImage = FreeformElementReference.getElementByPath(thisFreeform, 'gid3.$1(gl_f_uploadImage)'),
+                        text        = FreeformElementReference.getElementByPath(thisFreeform, 'gid3.$1(gl_f_textArea):body>value');
+                    if (uploadImage && Array.isArray(uploadImage.body.payload.options) && uploadImage.body.payload.options.length > 0 ) {
+                        dbData['blocks'].push(
+                            {
+                                'type' : 'leftBigImage',
+                                'text' : text,
+                                weight: 1,
+                                image: [ uploadImage.body.payload.options[0].path ]
+                            }
+                        );
+                    }
+
+                }
+                {
+                    // g5
+                    let uploadImage = FreeformElementReference.getElementByPath(thisFreeform, 'gid4.$1(gl_f_uploadImage)'),
+                        text        = FreeformElementReference.getElementByPath(thisFreeform, 'gid4.$1(gl_f_textArea):body>value');
+                    if (uploadImage && Array.isArray(uploadImage.body.payload.options) && uploadImage.body.payload.options.length > 0 ) {
+                        dbData['blocks'].push(
+                            {
+                                'type' : 'leftMiniImage',
+                                'text' : text,
+                                weight: 1,
+                                image: [ uploadImage.body.payload.options[0].path ]
+                            }
+                        );
+                    }
+                }
+
+                {
+                    // g6
+                    let uploadImage = FreeformElementReference.getElementByPath(thisFreeform, 'gid5.$1(gl_f_uploadImage)'),
+                        text        = FreeformElementReference.getElementByPath(thisFreeform, 'gid5.$1(gl_f_textArea):body>value');
+                    if (uploadImage && Array.isArray(uploadImage.body.payload.options) && uploadImage.body.payload.options.length > 0 ) {
+                        dbData['blocks'].push(
+                            {
+                                'type' : 'rightBigImage',
+                                'text' : text,
+                                weight: 1,
+                                image: [ uploadImage.body.payload.options[0].path ]
+                            }
+                        );
+                    }
+
+                }
+                {
+                    // g7
+                    let uploadImage = FreeformElementReference.getElementByPath(thisFreeform, 'gid6.$1(gl_f_uploadImage)'),
+                        text        = FreeformElementReference.getElementByPath(thisFreeform, 'gid6.$1(gl_f_textArea):body>value');
+                    if (uploadImage && Array.isArray(uploadImage.body.payload.options) && uploadImage.body.payload.options.length > 0 ) {
+                        dbData['blocks'].push(
+                            {
+                                'type' : 'rightMiniImage',
+                                'text' : text,
+                                weight: 1,
+                                image: [ uploadImage.body.payload.options[0].path ]
+                            }
+                        );
+                    }
+                }
+
+                LOG.fstep( fname, 111, 3, 'dbData', dbData );
+                await FIREBASE.batchGroupCreate (
+                    tablepath,
+                    dbData,
+                    firestoreGroupBatch
+                );
+                LOG.fstep( fname, 555, 12, '- ', dbData, firestoreGroupBatch );
+            } else {
+                LOG.fstep( fname, 5, 2, 'We has  not db -> next', db, formUser, modelId, formId, modelId );
+            }
+        //@> LATER DELETE - WRITE TO USER TABLE
+
+
+        //@<
+            if ( !iNfirestoreGroupBatch && (stepResult || notStepperUpdate) ) {
+                let batchWriteResult = await FIREBASE.writeBatchFirestoreDbGroup(firestoreGroupBatch);
+                if (batchWriteResult) {
+                    // we can write to db -> return form id
+                    return CONNECT.returnPromiseWithValue( stepResult || notStepperUpdate );
+                } else {
+                    // we can NOT write to db -> return error
+                    return CONNECT.returnPromiseWithValue(false);
+                }
+            }
+        //@>
+    }
 
     async function submitForm (iNformUser, iNmodelId, iNformId, iNclienUserData, iNfirestoreGroupBatch = null ) {
         let fname       = 'submitForm',
@@ -382,7 +473,8 @@ const _ = {};
             cdata       = iNclienUserData,
             firestoreGroupBatch,
             notStepperUpdate,
-            stepResult;
+            stepResult,
+            objForRunBackendFunctionViaSns = { 'command' : 'submit' };
 
         if ( !iNfirestoreGroupBatch ) {
             const   firestoreDb           = FIREBASE.getFirestoreDb();
@@ -403,6 +495,7 @@ const _ = {};
                 LOG.ferror( fname, 2, 1, 'ERROR END We has NOT object in db', modelOfForm);
                 return CONNECT.returnPromiseWithValue(null);
             }
+
         //We has this form in db -> check access to this db
             LOG.fstep( fname, 2, 2, 'We has this form in db -> check access to this db', modelOfForm);
 
@@ -427,6 +520,9 @@ const _ = {};
                 // this form must have own stepper -> get stepper
                 LOG.ferror(fname, 4, 1, "This form has stepper -> get all elements", stepper ); // modelOfForm
 
+                // add stepper  to object for run backend via sns
+                    objForRunBackendFunctionViaSns['stepper'] = stepper;
+
                 //@< load all elements
                     let allEllements = await FreeformElement.Object.loadElements(
                         formUser, modelId, formId, false
@@ -441,7 +537,6 @@ const _ = {};
 
 
 
-                        // return CONNECT.returnPromiseWithValue(stepResult);
                     } else {
                         LOG.fstep( fname, 5, 12, 'END ERROR - We could not load -> go NEXT ', allEllements, global['freeform'] );
                         return CONNECT.returnPromiseValue(false);
@@ -463,155 +558,18 @@ const _ = {};
 
             }
 
+            // add freeform  to object for run backend via sns
+                objForRunBackendFunctionViaSns['freeform'] = global['freeform'];
 
-            //@< LATER DELETE - WRITE TO USER TABLE
-                let db = FreeformElement.Db.isFormWithDb(modelOfForm), tableId;
-                if (db ) {
-                    tableId = (modelId === 'work-article')? 'work-article' : 'article-site1';
+            // pass to backend function
+                let time = new Date().getTime();
+                console.log('start runSubmitBackend - ', time);
+                runSubmitBackend(
+                    objForRunBackendFunctionViaSns
+                );
+                console.log('start runSubmitBackend - ', new Date().getTime() - time, 'time', time);
 
-                    LOG.fstep( fname, 5, 1, 'We has db -> get all fields', db, formUser, modelId, formId, modelId );
-                    // we has db -> loading all sub elements
-                    let loadResult = await FreeformElement.Object.loadElements(formUser, modelId, formId);
-                    LOG.fstep( fname, 111, 1, 'loadResult', loadResult );
 
-                    let tablepath = `/users/wideFormat24/table/${tableId}/row/${formId}`,
-                        thisFreeform = FreeformShared.getFreeform(formUser, modelId, formId);
-                    LOG.fstep( fname, 111, 2, 'thisFreeform, global', thisFreeform, global['freeform'] );
-
-                    let dbData = {};
-                    dbData['name']      = '';
-                    dbData['title']     = '';
-                    dbData['status']    = 1;
-                    if ( cdata['uid'] ) dbData['uid']       = cdata['uid'];
-                    dbData['date']      = new Date();
-                    dbData['blocks']    = [];
-
-                    if ( tableId === 'work-article' ) {
-                        // if we have work-article -> add mini icon and text
-                        // g3
-                        let uploadImage = FreeformElementReference.getElementByPath(thisFreeform, 'gidIcon.$1(gl_f_uploadImage)'),
-                            text        = FreeformElementReference.getElementByPath(thisFreeform, 'gidIcon.$1(gl_f_textArea):body>value'),
-                            category    = FreeformElementReference.getElementByPath(thisFreeform, 'g0_r3_id2:body>value');
-
-                        if (uploadImage && Array.isArray(uploadImage.body.payload.options) && uploadImage.body.payload.options.length > 0 ) {
-                            dbData['icon'] = uploadImage.body.payload.options[0].path;
-                            dbData['text'] = text;
-                            dbData['category'] = category;
-                        }
-                    }
-
-                    {
-                        // g1 - g0_r1_id1 - name | date - g0_r3_id1 | title - g0_r2_id1
-                        let name    = FreeformElementReference.getElementByPath(thisFreeform, 'g0_r1_id1:body>value'),
-                            date    = FreeformElementReference.getElementByPath(thisFreeform, 'g0_r3_id1:body>value'),
-                            title   = FreeformElementReference.getElementByPath(thisFreeform, 'g0_r2_id1:body>value');
-
-                        if (name  ) {
-                            dbData['name'] = name;
-                        }
-                        if (date  ) {
-                            dbData['date'] = new Date( parseInt(date) );
-                        }
-                        if (title  ) {
-                            dbData['title'] = title;
-                        }
-
-                    }
-                    {
-                        // g3
-                        let uploadImage = FreeformElementReference.getElementByPath(thisFreeform, 'gid2.$1(gl_f_uploadImage)'),
-                            text        = FreeformElementReference.getElementByPath(thisFreeform, 'gid2.$1(gl_f_textArea):body>value');
-                        if (uploadImage && Array.isArray(uploadImage.body.payload.options) && uploadImage.body.payload.options.length > 0 ) {
-                            dbData['blocks'].push(
-                                {
-                                    'type' : 'centerBigImage',
-                                    'text' : text,
-                                    weight: 1,
-                                    image: [ uploadImage.body.payload.options[0].path ]
-                                }
-                            );
-                        }
-
-                    }
-                    {
-                        // g4
-                        let uploadImage = FreeformElementReference.getElementByPath(thisFreeform, 'gid3.$1(gl_f_uploadImage)'),
-                            text        = FreeformElementReference.getElementByPath(thisFreeform, 'gid3.$1(gl_f_textArea):body>value');
-                        if (uploadImage && Array.isArray(uploadImage.body.payload.options) && uploadImage.body.payload.options.length > 0 ) {
-                            dbData['blocks'].push(
-                                {
-                                    'type' : 'leftBigImage',
-                                    'text' : text,
-                                    weight: 1,
-                                    image: [ uploadImage.body.payload.options[0].path ]
-                                }
-                            );
-                        }
-
-                    }
-                    {
-                        // g5
-                        let uploadImage = FreeformElementReference.getElementByPath(thisFreeform, 'gid4.$1(gl_f_uploadImage)'),
-                            text        = FreeformElementReference.getElementByPath(thisFreeform, 'gid4.$1(gl_f_textArea):body>value');
-                        if (uploadImage && Array.isArray(uploadImage.body.payload.options) && uploadImage.body.payload.options.length > 0 ) {
-                            dbData['blocks'].push(
-                                {
-                                    'type' : 'leftMiniImage',
-                                    'text' : text,
-                                    weight: 1,
-                                    image: [ uploadImage.body.payload.options[0].path ]
-                                }
-                            );
-                        }
-                    }
-
-                    {
-                        // g6
-                        let uploadImage = FreeformElementReference.getElementByPath(thisFreeform, 'gid5.$1(gl_f_uploadImage)'),
-                            text        = FreeformElementReference.getElementByPath(thisFreeform, 'gid5.$1(gl_f_textArea):body>value');
-                        if (uploadImage && Array.isArray(uploadImage.body.payload.options) && uploadImage.body.payload.options.length > 0 ) {
-                            dbData['blocks'].push(
-                                {
-                                    'type' : 'rightBigImage',
-                                    'text' : text,
-                                    weight: 1,
-                                    image: [ uploadImage.body.payload.options[0].path ]
-                                }
-                            );
-                        }
-
-                    }
-                    {
-                        // g7
-                        let uploadImage = FreeformElementReference.getElementByPath(thisFreeform, 'gid6.$1(gl_f_uploadImage)'),
-                            text        = FreeformElementReference.getElementByPath(thisFreeform, 'gid6.$1(gl_f_textArea):body>value');
-                        if (uploadImage && Array.isArray(uploadImage.body.payload.options) && uploadImage.body.payload.options.length > 0 ) {
-                            dbData['blocks'].push(
-                                {
-                                    'type' : 'rightMiniImage',
-                                    'text' : text,
-                                    weight: 1,
-                                    image: [ uploadImage.body.payload.options[0].path ]
-                                }
-                            );
-                        }
-                    }
-
-                    LOG.fstep( fname, 111, 3, 'dbData', dbData );
-                    await FIREBASE.batchGroupCreate (
-                        tablepath,
-                        dbData,
-                        firestoreGroupBatch
-                    );
-                    LOG.fstep( fname, 555, 12, '- ', dbData, firestoreGroupBatch );
-                } else {
-                    LOG.fstep( fname, 5, 2, 'We has  not db -> next', db, formUser, modelId, formId, modelId );
-                }
-
-                //
-                // let data = FreeformElementReference.getElementByPath(thisFreeform, 'inid2.inid3.$1(lid2).&1(lid1):position.$1(lid1)::save-position(#newVar).#newVar');
-
-            //@> LATER DELETE - WRITE TO USER TABLE
 
             if ( !iNfirestoreGroupBatch && (stepResult || notStepperUpdate) ) {
                 let batchWriteResult = await FIREBASE.writeBatchFirestoreDbGroup(firestoreGroupBatch);

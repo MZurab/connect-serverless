@@ -50,3 +50,31 @@ function sendMessage (iNmessage, iNarn) {
 }
 module.exports.sendMessage = sendMessage;
 
+function getTextFromEvent (iNeventObject) {
+    let event = iNeventObject, r = null;
+    if (
+        event &&
+        event['Records'] &&
+        event['Records'][0] &&
+        event['Records'][0]['Sns'] &&
+        event['Records'][0]['Sns']['Message']
+    ) {
+        r = event['Records'][0]['Sns']['Message'];
+    }
+
+    return r;
+}
+module.exports.getTextFromEvent = getTextFromEvent;
+
+
+
+function getObjectFromEvent (iNeventObject) {
+    let event = iNeventObject, text = getTextFromEvent(event), r;
+    if (
+        text
+    ) {
+        r = JSON.parse(text);
+    }
+    return r;
+}
+module.exports.getObjectFromEvent = getObjectFromEvent;

@@ -938,7 +938,8 @@ class FreeformOptions {
         return result;
     }
 
-    static isSavableForm (iNform, iNoptionsForFieldFormModel = false) { //NONUSE WHILE ANYWHERE
+    static isSavableForm (iNform, iNoptionsForFieldFormModel = false)
+    { //NONUSE WHILE ANYWHERE
         /* OPTIONS MODELS - SAVABLE models
         * savable forms can not sava value => create one form for all with id '@savable'
         *  if the model is savable - we pass this option to the object from model
@@ -949,6 +950,7 @@ class FreeformOptions {
 
         return result;
     }
+
     static getUseType (iNform, iNoptionsForFieldFormModel = false) { //+
         /* OPTIONS MODELS - useType 'individual' models
         *  individual model use this form only creator
