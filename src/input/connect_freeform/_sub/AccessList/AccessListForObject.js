@@ -18,9 +18,9 @@ class AccessListForObject {// FreeformAccessListForObject
         */
         // passed data
         const   fname       = 'getAccessListsForFormObjectByList',
-            user            = iNuserLogin,
-            model           = iNmodelId,
-            list            = iNarrayList;
+                user        = iNuserLogin,
+                model       = iNmodelId,
+                list        = iNarrayList;
 
         let     counter         = 0,
             result          = {};

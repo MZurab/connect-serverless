@@ -1,5 +1,7 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
+    "declaration": false,
     "module": "commonjs",
     "target": "es6",
     "lib": [ "es6", "dom" ],
@@ -7,14 +9,15 @@
     "rootDir": "./",
     "sourceMap": true,
     "allowJs": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noUnusedLocals": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
     "noImplicitReturns": true,
     "preserveConstEnums": true,
     "suppressImplicitAnyIndexErrors": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    noUnusedParameters: false
   },
   "exclude": [ "node_modules", "build", "webpack" ],
   "types": [ "typePatches" ]

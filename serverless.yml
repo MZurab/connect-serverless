@@ -24,6 +24,9 @@ provider:
   region: eu-west-1
   stage: dev
   role: arn:aws:iam::222322594734:role/lambda_basic_execution # Overwrite the default IAM role which is used for all functions
+  tags: # Optional service wide function tags
+      freefrom  : freefrom
+      project   : connect
 
 
 # you can overwrite defaults here
@@ -65,6 +68,9 @@ functions:
     memorySize: 1024 # function specific
     timeout: 30 # The default is 6 seconds. Note: API Gateway current maximum is 30 seconds
     logRetentionInDays: 14 # Set the default RetentionInDays for a CloudWatch LogGroup
+    description: Some text # The description of your function.
+    tags: # Function specific tags
+      type      : backend
 #    Check the event documentation for details
     events:
       - sns: arn:aws:sns:eu-west-1:222322594734:freeform-submit-form #freeform-submit-form
@@ -79,6 +85,11 @@ functions:
     memorySize: 1024 # function specific
     timeout: 30 # The default is 6 seconds. Note: API Gateway current maximum is 30 seconds
     logRetentionInDays: 14 # Set the default RetentionInDays for a CloudWatch LogGroup
+#    environment: # Function level environment variables
+#        functionEnvVar: 12345678
+    description: Some text # The description of your function.
+    tags: # Function specific tags
+      type      : frontend
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
@@ -125,9 +136,9 @@ functions:
 #       Description: "Description for the output"
 #       Value: "Some output value"
 
-#plugins:
-#  - serverless-plugin-typescript
-##  - serverless-offline
+plugins:
+  - serverless-plugin-typescript
+#  - serverless-offline
 #
 #package:
 #  exclude:

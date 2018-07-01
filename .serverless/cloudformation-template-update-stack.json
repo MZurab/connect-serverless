@@ -11,10 +11,10 @@
         "LogGroupName": "/aws/lambda/connect-dev-backend-freeform-submit"
       }
     },
-    "ConnectDashfreeformLogGroup": {
+    "FrontendDashfreeformDashindexDashpointLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/connect-dev-connect-freeform"
+        "LogGroupName": "/aws/lambda/connect-dev-frontend-freeform-index-point"
       }
     },
     "BackendDashfreeformDashsubmitLambdaFunction": {
@@ -24,57 +24,73 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/connect/dev/1529987878179-2018-06-26T04:37:58.179Z/connect.zip"
+          "S3Key": "serverless/connect/dev/1530468908252-2018-07-01T18:15:08.252Z/connect.zip"
         },
         "FunctionName": "connect-dev-backend-freeform-submit",
         "Handler": "src/handler/freeform/backend/submit.handler",
         "MemorySize": 1024,
         "Role": "arn:aws:iam::222322594734:role/lambda_basic_execution",
         "Runtime": "nodejs8.10",
-        "Timeout": 30
+        "Timeout": 30,
+        "Description": "Some text",
+        "Tags": [
+          {
+            "Key": "type",
+            "Value": "backend"
+          }
+        ]
       },
       "DependsOn": [
         "BackendDashfreeformDashsubmitLogGroup"
       ]
     },
-    "BackendDashfreeformDashsubmitLambdaVersionABYzxsqy7pBSCmL3hVd4l2LlxmD9Iki5bsSpYOE7I4": {
+    "BackendDashfreeformDashsubmitLambdaVersiondK7Cdtefj2o2trTJWhwb5wHFTaWjNPDs7GBLLp7c1Y": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "BackendDashfreeformDashsubmitLambdaFunction"
         },
-        "CodeSha256": "Ubr5c7tnLTbUqsS9iTjsHl6JP04fKtoLMhUaGuKgS6o="
+        "CodeSha256": "apeQFHaFpNuCysoW9oFsq5OC+5Oc03HXZptH9oUmuf0=",
+        "Description": "Some text"
       }
     },
-    "ConnectDashfreeformLambdaFunction": {
+    "FrontendDashfreeformDashindexDashpointLambdaFunction": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/connect/dev/1529987878179-2018-06-26T04:37:58.179Z/connect.zip"
+          "S3Key": "serverless/connect/dev/1530468908252-2018-07-01T18:15:08.252Z/connect.zip"
         },
-        "FunctionName": "connect-dev-connect-freeform",
+        "FunctionName": "connect-dev-frontend-freeform-index-point",
         "Handler": "src/handler/freeform/frontend.handler",
         "MemorySize": 1024,
         "Role": "arn:aws:iam::222322594734:role/lambda_basic_execution",
         "Runtime": "nodejs8.10",
-        "Timeout": 30
+        "Timeout": 30,
+        "Description": "Some text",
+        "Tags": [
+          {
+            "Key": "type",
+            "Value": "frontend"
+          }
+        ]
       },
       "DependsOn": [
-        "ConnectDashfreeformLogGroup"
+        "FrontendDashfreeformDashindexDashpointLogGroup"
       ]
     },
-    "ConnectDashfreeformLambdaVersionZTBdGI1QAkt6idWYPLTpstZ1AnrMAk7S509ZcVlvYg": {
+    "FrontendDashfreeformDashindexDashpointLambdaVersionyW10NvdlUm7HaJ5ug5WLQ3J2YPLZkL6Tncqq2N8zzJA": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
-          "Ref": "ConnectDashfreeformLambdaFunction"
+          "Ref": "FrontendDashfreeformDashindexDashpointLambdaFunction"
         },
-        "CodeSha256": "Ubr5c7tnLTbUqsS9iTjsHl6JP04fKtoLMhUaGuKgS6o="
+        "CodeSha256": "apeQFHaFpNuCysoW9oFsq5OC+5Oc03HXZptH9oUmuf0=",
+        "Description": "Some text"
       }
     },
     "BackendDashfreeformDashsubmitSnsSubscriptionFreeformsubmitform": {
@@ -124,13 +140,13 @@
     "BackendDashfreeformDashsubmitLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "BackendDashfreeformDashsubmitLambdaVersionABYzxsqy7pBSCmL3hVd4l2LlxmD9Iki5bsSpYOE7I4"
+        "Ref": "BackendDashfreeformDashsubmitLambdaVersiondK7Cdtefj2o2trTJWhwb5wHFTaWjNPDs7GBLLp7c1Y"
       }
     },
-    "ConnectDashfreeformLambdaFunctionQualifiedArn": {
+    "FrontendDashfreeformDashindexDashpointLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ConnectDashfreeformLambdaVersionZTBdGI1QAkt6idWYPLTpstZ1AnrMAk7S509ZcVlvYg"
+        "Ref": "FrontendDashfreeformDashindexDashpointLambdaVersionyW10NvdlUm7HaJ5ug5WLQ3J2YPLZkL6Tncqq2N8zzJA"
       }
     }
   }
