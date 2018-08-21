@@ -11,6 +11,18 @@
         "LogGroupName": "/aws/lambda/connect-dev-backend-freeform-submit"
       }
     },
+    "TestDashgraphqlLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/connect-dev-test-graphql"
+      }
+    },
+    "ExampleLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/connect-dev-example"
+      }
+    },
     "FrontendDashfreeformDashindexDashpointLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
@@ -24,7 +36,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/connect/dev/1530468908252-2018-07-01T18:15:08.252Z/connect.zip"
+          "S3Key": "serverless/connect/dev/1534888756871-2018-08-21T21:59:16.871Z/connect.zip"
         },
         "FunctionName": "connect-dev-backend-freeform-submit",
         "Handler": "src/handler/freeform/backend/submit.handler",
@@ -44,15 +56,75 @@
         "BackendDashfreeformDashsubmitLogGroup"
       ]
     },
-    "BackendDashfreeformDashsubmitLambdaVersiondK7Cdtefj2o2trTJWhwb5wHFTaWjNPDs7GBLLp7c1Y": {
+    "BackendDashfreeformDashsubmitLambdaVersionaxXKHS91CQNDM6mOSKKj5wZFDD6BmtKgd0KhHbXBolE": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "BackendDashfreeformDashsubmitLambdaFunction"
         },
-        "CodeSha256": "apeQFHaFpNuCysoW9oFsq5OC+5Oc03HXZptH9oUmuf0=",
+        "CodeSha256": "sMb/aiySsZo1FKAY71T9LJ8gtjJp7kIa1ulZ6UMHit4=",
         "Description": "Some text"
+      }
+    },
+    "TestDashgraphqlLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "ServerlessDeploymentBucket"
+          },
+          "S3Key": "serverless/connect/dev/1534888756871-2018-08-21T21:59:16.871Z/connect.zip"
+        },
+        "FunctionName": "connect-dev-test-graphql",
+        "Handler": "src/handler/graphql/index.handler",
+        "MemorySize": 1024,
+        "Role": "arn:aws:iam::222322594734:role/lambda_basic_execution",
+        "Runtime": "nodejs8.10",
+        "Timeout": 6
+      },
+      "DependsOn": [
+        "TestDashgraphqlLogGroup"
+      ]
+    },
+    "TestDashgraphqlLambdaVersionbRPfm2j7Ir8bWMR8Jtw35XM2Az5G88SqEWYwPpyI": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "TestDashgraphqlLambdaFunction"
+        },
+        "CodeSha256": "sMb/aiySsZo1FKAY71T9LJ8gtjJp7kIa1ulZ6UMHit4="
+      }
+    },
+    "ExampleLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "ServerlessDeploymentBucket"
+          },
+          "S3Key": "serverless/connect/dev/1534888756871-2018-08-21T21:59:16.871Z/connect.zip"
+        },
+        "FunctionName": "connect-dev-example",
+        "Handler": "src/handler/example.base",
+        "MemorySize": 1024,
+        "Role": "arn:aws:iam::222322594734:role/lambda_basic_execution",
+        "Runtime": "nodejs8.10",
+        "Timeout": 6
+      },
+      "DependsOn": [
+        "ExampleLogGroup"
+      ]
+    },
+    "ExampleLambdaVersionrE5LGWhU6ppBqXEchSsfTSRZrPCOzl7IeS4Ueod4Z8": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "ExampleLambdaFunction"
+        },
+        "CodeSha256": "sMb/aiySsZo1FKAY71T9LJ8gtjJp7kIa1ulZ6UMHit4="
       }
     },
     "FrontendDashfreeformDashindexDashpointLambdaFunction": {
@@ -62,7 +134,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/connect/dev/1530468908252-2018-07-01T18:15:08.252Z/connect.zip"
+          "S3Key": "serverless/connect/dev/1534888756871-2018-08-21T21:59:16.871Z/connect.zip"
         },
         "FunctionName": "connect-dev-frontend-freeform-index-point",
         "Handler": "src/handler/freeform/frontend.handler",
@@ -82,14 +154,14 @@
         "FrontendDashfreeformDashindexDashpointLogGroup"
       ]
     },
-    "FrontendDashfreeformDashindexDashpointLambdaVersionyW10NvdlUm7HaJ5ug5WLQ3J2YPLZkL6Tncqq2N8zzJA": {
+    "FrontendDashfreeformDashindexDashpointLambdaVersion07YXqdgGyE2kPhgqhemKlyCzAQF9HFeM9oO5EbPVo": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "FrontendDashfreeformDashindexDashpointLambdaFunction"
         },
-        "CodeSha256": "apeQFHaFpNuCysoW9oFsq5OC+5Oc03HXZptH9oUmuf0=",
+        "CodeSha256": "sMb/aiySsZo1FKAY71T9LJ8gtjJp7kIa1ulZ6UMHit4=",
         "Description": "Some text"
       }
     },
@@ -140,13 +212,25 @@
     "BackendDashfreeformDashsubmitLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "BackendDashfreeformDashsubmitLambdaVersiondK7Cdtefj2o2trTJWhwb5wHFTaWjNPDs7GBLLp7c1Y"
+        "Ref": "BackendDashfreeformDashsubmitLambdaVersionaxXKHS91CQNDM6mOSKKj5wZFDD6BmtKgd0KhHbXBolE"
+      }
+    },
+    "TestDashgraphqlLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "TestDashgraphqlLambdaVersionbRPfm2j7Ir8bWMR8Jtw35XM2Az5G88SqEWYwPpyI"
+      }
+    },
+    "ExampleLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "ExampleLambdaVersionrE5LGWhU6ppBqXEchSsfTSRZrPCOzl7IeS4Ueod4Z8"
       }
     },
     "FrontendDashfreeformDashindexDashpointLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "FrontendDashfreeformDashindexDashpointLambdaVersionyW10NvdlUm7HaJ5ug5WLQ3J2YPLZkL6Tncqq2N8zzJA"
+        "Ref": "FrontendDashfreeformDashindexDashpointLambdaVersion07YXqdgGyE2kPhgqhemKlyCzAQF9HFeM9oO5EbPVo"
       }
     }
   }

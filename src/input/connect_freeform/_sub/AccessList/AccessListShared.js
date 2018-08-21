@@ -12,6 +12,10 @@ class AccessListShared {// FreeformAccessListForModel
 
     }
 
+    static async getTypeAccessList () {
+        //    return global | [ [private - object | model ]
+    }
+
     static async checkListForAccessToFreeformObject (iNoperation, iNfolder,iNobjModelId, iNobjInId, iNuser, iNmodelId, iNformId, InExistModel, iNclientData = null) { //+
         const fname = 'checkListForAccessToFreeformObject';
         LOG.fstep (

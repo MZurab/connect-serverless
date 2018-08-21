@@ -5,7 +5,7 @@ const LOG       = require('ramman-z-log');
 
 const Stepper                   = require("./../GlobalStorage/Stepper").Stepper;
 const FreeformFormObject        = require("./../Form/FreeformFormObject").FreeformFormObject;
-const AccessListShared           = require('./../AccessList/AccessListShared').AccessListShared;// AccessListShared
+const AccessListShared           = require('./../AccessList/AccessListShared').AccessListShared_;// AccessListShared
 const FreeformShared            = require('./../FreeformShared').FreeformShared;// FreeformShared
 
 class FreeformStepper {

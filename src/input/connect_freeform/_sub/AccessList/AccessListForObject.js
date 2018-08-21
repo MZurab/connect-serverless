@@ -5,7 +5,7 @@ const firestore = FIREBASE.firestore;
 
 
 const GlobalStorage     = require('../GlobalStorage/GlobalStorage').GlobalStorage;// FreeformGlobalStorage
-const AccessListShared      = require('./AccessListShared').AccessListShared;
+const AccessListShared      = require('./AccessListShared').AccessListShared_;
 
 class AccessListForObject {// FreeformAccessListForObject
 

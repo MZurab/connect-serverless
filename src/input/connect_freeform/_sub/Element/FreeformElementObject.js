@@ -10,7 +10,7 @@ const FreeformElementModel      = require('./FreeformElementModel').FreeformElem
 const FreeformElementReference      = require('./FreeformElementReference').FreeformElementReference;// FreeformElementModel
 const FreeformShared        = require('./../FreeformShared').FreeformShared;// FreeformShared
 
-const AccessListShared           = require('./../AccessList/AccessListShared').AccessListShared;// AccessListShared
+const AccessListShared           = require('./../AccessList/AccessListShared').AccessListShared_;// AccessListShared
 
 class FreeformElementObject {
     constructor () {

@@ -2,127 +2,198 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91e57552-c321-4991-bcf5-46570b843347" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/handler/example.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/handler/freeform/backend/member.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/handler/freeform/backend/member.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/handler/freeform/backend/submit.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/handler/freeform/frontend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Member/FreeformMember.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/handler/freeform/backend/submit-old.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/handler/graphql/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListForModel.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListGlobal.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListShared_.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/functions/connect.functions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/libraries/elementReference/elementReference.library.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/libraries/freeform/freeformElementReference.library.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/modules/db/db.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/modules/db/res/abstract/@enum/db.enum.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/modules/db/res/abstract/@enum/operation-type.enum.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/modules/db/res/abstract/@type/block.type.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/modules/db/res/abstract/@type/connection.type.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/modules/db/res/abstract/@type/operation.type.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/modules/db/res/abstract/@type/variable.type.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.serverless/cloudformation-template-update-stack.json" beforeDir="false" afterPath="$PROJECT_DIR$/.serverless/cloudformation-template-update-stack.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.serverless/connect.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.serverless/connect.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.serverless/serverless-state.json" beforeDir="false" afterPath="$PROJECT_DIR$/.serverless/serverless-state.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/aws-lambda/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/aws-lambda/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lodash/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/lodash/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverless.yml" beforeDir="false" afterPath="$PROJECT_DIR$/serverless.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/handler/example.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler/example.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/handler/freeform/backend/member.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler/freeform/backend/member-old.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/handler/freeform/backend/member.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler/freeform/backend/member.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/handler/freeform/backend/submit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/handler/freeform/backend/submit.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler/freeform/backend/submit.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/handler/freeform/frontend.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler/freeform/frontend-old.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/handler/freeform/frontend.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler/freeform/frontend.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListForModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListForModel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListForObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListForObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListShared.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListShared.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Element/FreeformElementObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Element/FreeformElementObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Group/FreeformGroupObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Group/FreeformGroupObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Member/FreeformMember.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Member/FreeformMember.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Page/FreeformPageObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Page/FreeformPageObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Row/FreeformRowObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Row/FreeformRowObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Stepper/FreeformStepper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Stepper/FreeformStepper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-837491440">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="TypeScriptServerServiceImpl" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="js" value="3" />
+          <entry key="json" value="2" />
+          <entry key="ts" value="7" />
+          <entry key="yml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JSON" value="1" />
+          <entry key="JavaScript" value="3" />
+          <entry key="TypeScript" value="7" />
+          <entry key="YAML" value="1" />
+          <entry key="tsconfig" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="js" value="31" />
+          <entry key="json" value="2" />
+          <entry key="ts" value="26" />
+          <entry key="yml" value="70" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JavaScript" value="31" />
+          <entry key="TypeScript" value="26" />
+          <entry key="YAML" value="70" />
+          <entry key="tsconfig" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.php.rename.constructor" />
+      <usages-collector id="statistics.php.new.test" />
+      <usages-collector id="statistics.php.new.class" />
+      <usages-collector id="statistics.php.composer.command.options" />
+      <usages-collector id="statistics.php.composer.actions" />
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tsconfig.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tsconfig.json">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/handler/db/db.handler.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/handler/freeform/backend/member-old.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+            <state relative-caret-position="30">
+              <caret line="11" column="15" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="submit.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/handler/freeform/backend/submit.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/handler/freeform/backend/submit-old.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="375">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="submit.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/handler/freeform/backend/submit.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="frontend.ts" pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/handler/freeform/frontend.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-              <folding>
-                <element signature="e#76#127#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="270">
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package-lock.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package-lock.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="index.d.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/@types/aws-lambda/index.d.ts">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/handler/graphql/index.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="597">
-              <caret line="721" column="25" selection-start-line="721" selection-start-column="25" selection-end-line="721" selection-end-column="25" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="330">
+              <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/@types/aws-lambda/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1605">
-              <caret line="107" column="2" selection-start-line="107" selection-start-column="2" selection-end-line="107" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="frontend.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/handler/freeform/frontend.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="749">
-              <caret line="70" column="23" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
-              <folding>
-                <element signature="e#1726#2587#0" />
-                <element signature="e#2643#2924#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="example.ts" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/handler/example.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="14" selection-end-line="5" selection-end-column="14" />
+            <state relative-caret-position="45">
+              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/serverless.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="443">
+              <caret line="80" column="10" selection-start-line="80" selection-start-column="10" selection-end-line="80" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tsconfig.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/handler/freeform/backend/submit.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/handler/freeform/backend/member.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -134,17 +205,36 @@
       <find>GETROOTMODEL</find>
       <find>savable</find>
       <find>freeform</find>
-      <find>submitForm</find>
       <find>ts</find>
-      <find>submit</find>
       <find>clientData</find>
       <find>formobject</find>
       <find>CustomAuthorizerHandler</find>
       <find>LOG.</find>
       <find>declaration</find>
       <find>&quot;compileOnSave&quot;: false,</find>
+      <find>noUnusedParameters</find>
       <find>usetAuthType</find>
+      <find>CONNECT</find>
+      <find>firestore.</find>
+      <find>startCopyAccessListToFormObject</find>
+      <find>getAccessObjectFromFormForUser</find>
+      <find>AccessListShared_</find>
+      <find>AccessListGlobal</find>
+      <find>submitForm</find>
+      <find>submitFor</find>
+      <find>getElementByPath</find>
+      <find>FreeformShared.</find>
+      <find>headerFromJs</find>
+      <find>json_merge_recursive</find>
+      <find>getMethod</find>
+      <find>submit</find>
+      <find>handler</find>
+      <find>arn:aws:iam::222322594734:user/aws</find>
     </findStrings>
+    <replaceStrings>
+      <replace>AccessListShared</replace>
+      <replace>export function</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -158,15 +248,38 @@
         <option value="$PROJECT_DIR$/src/input/aws/sns.js" />
         <option value="$PROJECT_DIR$/src/handler/freeform/frontend.js" />
         <option value="$PROJECT_DIR$/src/input/connect_freeform/freeform.js" />
-        <option value="$PROJECT_DIR$/src/handler/freeform/backend/submit.js" />
         <option value="$PROJECT_DIR$/src/handler/freeform/backend/member.js" />
         <option value="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListForObject.js" />
         <option value="$PROJECT_DIR$/src/input/connect_freeform/_sub/Member/FreeformMember.js" />
+        <option value="$PROJECT_DIR$/src/handler/freeform/backend/submit.js" />
+        <option value="$PROJECT_DIR$/src/input/connect_freeform/_sub/Member/FreeformMember.ts" />
+        <option value="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListForModel.js" />
+        <option value="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListShared.ts" />
+        <option value="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListShared_.ts" />
+        <option value="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListForModel.ts" />
+        <option value="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListGlobal.ts" />
+        <option value="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListShared.js" />
+        <option value="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessList.js" />
+        <option value="$PROJECT_DIR$/src/handler/db/db.handler.ts" />
+        <option value="$PROJECT_DIR$/src/res/libraries/elementReference.library.ts" />
+        <option value="$PROJECT_DIR$/src/res/libraries/elementReference/elementReference.library.ts" />
+        <option value="$PROJECT_DIR$/src/res/modules/db/res/abstract/@enum/db.enum.ts" />
+        <option value="$PROJECT_DIR$/src/res/modules/db/res/abstract/@type/connection.type.ts" />
+        <option value="$PROJECT_DIR$/src/res/modules/db/res/abstract/@type/block.type.ts" />
+        <option value="$PROJECT_DIR$/src/res/modules/db/res/abstract/@type/variable.type.ts" />
+        <option value="$PROJECT_DIR$/src/res/modules/db/res/abstract/@enum/operation-type.enum.ts" />
+        <option value="$PROJECT_DIR$/src/res/modules/db/res/abstract/@type/operation.type.ts" />
+        <option value="$PROJECT_DIR$/src/res/libraries/freeform/freefirn.shared.library.ts" />
+        <option value="$PROJECT_DIR$/src/res/libraries/connect.library.ts" />
+        <option value="$PROJECT_DIR$/src/res/functions/connect.functions.ts" />
+        <option value="$PROJECT_DIR$/src/handler/graphql/index.js" />
+        <option value="$PROJECT_DIR$/src/handler/freeform/backend/submit.ts" />
+        <option value="$PROJECT_DIR$/src/handler/freeform/backend/member.ts" />
+        <option value="$PROJECT_DIR$/src/handler/freeform/frontend.ts" />
+        <option value="$PROJECT_DIR$/src/handler/graphql/index.ts" />
+        <option value="$PROJECT_DIR$/tsconfig.json" />
         <option value="$PROJECT_DIR$/serverless.yml" />
         <option value="$PROJECT_DIR$/src/handler/example.ts" />
-        <option value="$PROJECT_DIR$/src/handler/freeform/backend/submit.ts" />
-        <option value="$PROJECT_DIR$/tsconfig.json" />
-        <option value="$PROJECT_DIR$/src/handler/freeform/frontend.ts" />
       </list>
     </option>
   </component>
@@ -181,8 +294,16 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="811" />
+    <option name="x" value="711" />
     <option name="y" value="23" />
     <option name="width" value="1410" />
     <option name="height" value="1242" />
@@ -193,6 +314,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -214,27 +336,6 @@
               <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
               <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
-              <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="sms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
-              <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="sms" type="462c0819:PsiDirectoryNode" />
-              <item name="updateStatus" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
-              <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="handler" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -242,79 +343,17 @@
               <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="handler" type="462c0819:PsiDirectoryNode" />
-              <item name="freeform" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
-              <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="handler" type="462c0819:PsiDirectoryNode" />
-              <item name="freeform" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
-              <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="handler" type="462c0819:PsiDirectoryNode" />
-              <item name="freeform" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend.ts" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
-              <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="input" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
-              <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="input" type="462c0819:PsiDirectoryNode" />
-              <item name="connect_freeform" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
-              <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="input" type="462c0819:PsiDirectoryNode" />
-              <item name="connect_freeform" type="462c0819:PsiDirectoryNode" />
-              <item name="_sub" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
-              <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="input" type="462c0819:PsiDirectoryNode" />
-              <item name="connect_freeform" type="462c0819:PsiDirectoryNode" />
-              <item name="_sub" type="462c0819:PsiDirectoryNode" />
-              <item name="AccessList" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
-              <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="input" type="462c0819:PsiDirectoryNode" />
-              <item name="connect_freeform" type="462c0819:PsiDirectoryNode" />
-              <item name="_sub" type="462c0819:PsiDirectoryNode" />
-              <item name="Member" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
-              <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="input" type="462c0819:PsiDirectoryNode" />
-              <item name="connect_links" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
     <property name="node.js.selected.package.prettier" value="" />
@@ -325,6 +364,10 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/res/functions" />
+      <recent name="$PROJECT_DIR$/src/res/libraries/freeform" />
+      <recent name="$PROJECT_DIR$/src/res/modules/db" />
+      <recent name="$PROJECT_DIR$/src/res/libraries/elementReference" />
       <recent name="$PROJECT_DIR$/src/handler/freeform" />
     </key>
   </component>
@@ -351,37 +394,61 @@
       <option name="presentableId" value="Default" />
       <updated>1529766256342</updated>
       <workItem from="1529766258140" duration="3879000" />
-      <workItem from="1529843035138" duration="21429000" />
+      <workItem from="1529843035138" duration="26669000" />
+      <workItem from="1531588292335" duration="9671000" />
+      <workItem from="1534884447285" duration="3690000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25308000" />
+    <option name="totallyTimeSpent" value="43909000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="811" y="23" width="1410" height="1242" extended-state="0" />
-    <editor active="true" />
+    <frame x="711" y="23" width="1410" height="1242" extended-state="0" />
     <layout>
-      <window_info anchor="bottom" id="TypeScript" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24982001" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25365496" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32869565" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info id="npm" order="2" side_tool="true" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3580786" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TypeScript" order="8" weight="0.32956523" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49964002" visible="true" weight="0.3573913" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50035995" side_tool="true" weight="0.3580786" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24982001" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32925764" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49964002" visible="true" weight="0.3580786" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50035995" side_tool="true" weight="0.3580786" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -389,64 +456,7 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="1" />
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/serverless.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="79" column="24" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="24" />
-          <folding>
-            <marker date="1530446861000" expanded="true" signature="4523:4580" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/freeform.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="70" column="30" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/_sub/Form/FreeformFormModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="53" column="40" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/input/firebase/firebase_install.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/_sub/Form/FreeformFormModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="795">
@@ -478,83 +488,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/_sub/FreeformShared.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="938" column="5" selection-start-line="938" selection-start-column="5" selection-end-line="938" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/freeform.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="84" selection-start-line="14" selection-start-column="84" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListForModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-339" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListForObject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/_sub/Member/FreeformMember.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/serverless.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="689">
-          <caret line="66" column="48" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
-          <folding>
-            <marker date="1530446861000" expanded="true" signature="4523:4580" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/handler/freeform/backend/member.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/handler/freeform/backend/member.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/handler/example.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/handler/freeform/backend/submit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/handler/freeform/backend/submit.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@types/aws-lambda/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1605">
@@ -572,27 +505,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
+    <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListShared_.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12525">
+          <caret line="835" column="8" selection-start-line="835" selection-start-column="8" selection-end-line="835" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListForObject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="88" column="25" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/_sub/Member/FreeformMember.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListGlobal.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListShared.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListForModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListForModel.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="994">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/_sub/Stepper/FreeformStepper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="792" selection-start-line="792" selection-end-line="792" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/res/modules/db/db.module.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/src/handler/freeform/frontend-old.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/handler/freeform/frontend.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="749">
-          <caret line="70" column="23" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
+        <state relative-caret-position="517">
+          <caret line="128" column="56" selection-start-line="128" selection-start-column="56" selection-end-line="128" selection-end-column="56" />
           <folding>
             <element signature="e#1726#2587#0" />
             <element signature="e#2643#2924#0" />
@@ -600,13 +582,181 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/freeform.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="585" column="4" selection-start-line="585" selection-start-column="4" selection-end-line="585" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/res/modules/db/res/abstract/@type/block.type.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/res/modules/db/res/abstract/@type/variable.type.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/res/modules/db/res/abstract/@enum/db.enum.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/_sub/Element/FreeformElementReference.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3165">
+          <caret line="211" column="40" selection-start-line="211" selection-start-column="25" selection-end-line="211" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/res/libraries/freeform/freefirn.shared.library.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/connect.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1230">
+          <caret line="82" column="44" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/_sub/FreeformShared.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="2" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/res/libraries/freeform/freeformElementReference.library.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/res/libraries/elementReference/elementReference.library.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/res/modules/db/res/abstract/@type/connection.type.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/res/modules/db/res/abstract/@type/operation.type.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/res/modules/db/res/abstract/@enum/operation-type.enum.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="29" selection-start-column="12" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/res/functions/connect.functions.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/handler/graphql/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/handler/db/db.handler.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/handler/freeform/backend/member-old.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/handler/freeform/backend/submit-old.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/handler/freeform/backend/submit.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/handler/freeform/backend/member.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/handler/freeform/frontend.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding>
-            <element signature="e#76#127#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/handler/graphql/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serverless.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="80" column="10" selection-start-line="80" selection-start-column="10" selection-end-line="80" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/handler/example.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
         </state>
       </provider>
     </entry>

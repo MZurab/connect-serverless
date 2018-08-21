@@ -7,7 +7,7 @@ const firestore = FIREBASE.firestore;
 const FreeformShared    = require('./../FreeformShared').FreeformShared;// FreeformGlobalStorage
 const FreeformGroup     = require('./../Group/FreeformGroup').FreeformGroup;// FreeformGlobalStorage
 
-const AccessListShared  = require('./../AccessList/AccessListShared').AccessListShared;// AccessListShared
+const AccessListShared  = require('./../AccessList/AccessListShared').AccessListShared_;// AccessListShared
 
 const FreeformElementModel      = require('./../Element/FreeformElementModel').FreeformElementModel;// FreeformShared
 const FreeformElementObject     = require('./../Element/FreeformElementObject').FreeformElementObject;// FreeformShared

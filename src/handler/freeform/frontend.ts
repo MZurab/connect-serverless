@@ -19,7 +19,7 @@ declare module LOG {
 LOG.on(); // off
 
 
-const base: Handler = async (event: any, context: Context, callback: Callback) => {
+const handler: Handler = async (event: any, context: Context, callback: Callback) => {
     // set header
         CONNECT.setHeader(event);
 
@@ -169,4 +169,4 @@ const base: Handler = async (event: any, context: Context, callback: Callback) =
     }
 
 };
-export {base};
+export {handler};
