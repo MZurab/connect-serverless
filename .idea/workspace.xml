@@ -2,70 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91e57552-c321-4991-bcf5-46570b843347" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/handler/graphql/dictionary/res/@abstract/@type/common.type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.serverless/cloudformation-template-update-stack.json" beforeDir="false" afterPath="$PROJECT_DIR$/.serverless/cloudformation-template-update-stack.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.serverless/connect.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.serverless/connect.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.serverless/serverless-state.json" beforeDir="false" afterPath="$PROJECT_DIR$/.serverless/serverless-state.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/color-convert/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/color-convert/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/color-name/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/color-name/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/color-name/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/color-name/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/color-name/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/color-name/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lodash/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/lodash/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/path-loader/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/path-loader/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/path-loader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/path-loader/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/path-loader/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/path-loader/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serverless/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serverless/lib/classes/Variables.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/lib/classes/Variables.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serverless/lib/classes/Variables.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/lib/classes/Variables.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/index.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/index.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/lib/cors.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/lib/cors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/lib/cors.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/lib/cors.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/lib/method/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/lib/method/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/lib/method/index.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/lib/method/index.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/create/templates/aws-go/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/create/templates/aws-go/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/platform/platform.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/platform/platform.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serverless/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serverless/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/connect_access.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/connect_access.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/connect_auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/connect_auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/connect_market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/connect_market.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/connect_service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/connect_service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.serverless/cloudformation-template-update-stack.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.serverless/connect.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.serverless/serverless-state.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.graphql.resolver.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.graphql.resolver.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.graphql.typedef.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.graphql.typedef.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.library.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.library.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.mock.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.mock.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handler/graphql/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler/graphql/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/aws/amazon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/aws/amazon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/aws/amazon.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/aws/amazon.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/aws/dinamo-old.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/aws/dinamo-old.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/aws/dynamo/dynamo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/aws/dynamo/dynamo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/aws/dynamo/res/@abstract/@enum/common.enum.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/aws/dynamo/res/@abstract/@enum/common.enum.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/aws/dynamo/res/@abstract/@type/common.type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/aws/dynamo/res/@abstract/@type/common.type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect-page/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect-page/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_access/access.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_access/access.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_access/confirm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_access/confirm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_access/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_access/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_app/app-base.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_app/app-base.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_app/app-onepay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_app/app-onepay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_app/app-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_app/app-page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_app/app-sharepay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_app/app-sharepay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_app/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_app/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_balance/balance.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_balance/balance.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_chat/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_chat/chat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_chat/chatOld.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_chat/chatOld.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_dictionary/dictionary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_dictionary/dictionary.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_market/market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_market/market.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_onepay/onepay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_onepay/onepay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_page/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_page/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_service/service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_service/service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_sms/sms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_sms/sms.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_talk/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_talk/chat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_talk/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_talk/message.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_users/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_users/users.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -110,14 +51,14 @@
         <counts>
           <entry key="js" value="34" />
           <entry key="json" value="2" />
-          <entry key="ts" value="2893" />
+          <entry key="ts" value="2917" />
           <entry key="yml" value="70" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JavaScript" value="34" />
-          <entry key="TypeScript" value="2893" />
+          <entry key="TypeScript" value="2917" />
           <entry key="YAML" value="70" />
           <entry key="tsconfig" value="2" />
         </counts>
@@ -131,11 +72,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.library.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+            <state relative-caret-position="465">
+              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -158,8 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.mock.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="21" selection-start-line="2" selection-start-column="8" selection-end-line="14" selection-end-column="21" />
+            <state relative-caret-position="315">
+              <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -176,8 +117,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/handler/graphql/index.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+            <state relative-caret-position="570">
+              <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -188,20 +129,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.graphql.typedef.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
+            <state relative-caret-position="45">
+              <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.graphql.resolver.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="21" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -246,8 +184,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>noUnusedParameters</find>
-      <find>usetAuthType</find>
       <find>CONNECT</find>
       <find>firestore.</find>
       <find>startCopyAccessListToFormObject</find>
@@ -276,6 +212,8 @@
       <find>checkForMask</find>
       <find>var</find>
       <find>get</find>
+      <find>console.log</find>
+      <find>cons</find>
     </findStrings>
     <replaceStrings>
       <replace>AccessListShared</replace>
@@ -335,11 +273,11 @@
         <option value="$PROJECT_DIR$/src/input/aws/dynamo/res/@abstract/@type/common.type.ts" />
         <option value="$PROJECT_DIR$/src/input/aws/dynamo/dynamo.ts" />
         <option value="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.mock.ts" />
-        <option value="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.graphql.typedef.ts" />
         <option value="$PROJECT_DIR$/src/handler/graphql/index.ts" />
-        <option value="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.graphql.resolver.ts" />
         <option value="$PROJECT_DIR$/src/handler/graphql/dictionary/res/@abstract/@type/common.type.ts" />
         <option value="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.library.ts" />
+        <option value="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.graphql.typedef.ts" />
+        <option value="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.graphql.resolver.ts" />
       </list>
     </option>
   </component>
@@ -564,12 +502,12 @@
       <workItem from="1529766258140" duration="3879000" />
       <workItem from="1529843035138" duration="26669000" />
       <workItem from="1531588292335" duration="9671000" />
-      <workItem from="1534884447285" duration="32478000" />
+      <workItem from="1534884447285" duration="32939000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72697000" />
+    <option name="totallyTimeSpent" value="73158000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1142" y="23" width="1410" height="1242" extended-state="0" />
@@ -948,23 +886,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/handler/graphql/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.graphql.typedef.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/handler/graphql/dictionary/res/@abstract/@type/common.type.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -972,30 +893,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.library.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/handler/graphql/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.mock.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="21" selection-start-line="2" selection-start-column="8" selection-end-line="14" selection-end-column="21" />
+        <state relative-caret-position="315">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.graphql.typedef.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.graphql.resolver.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.library.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
         </state>
       </provider>
     </entry>

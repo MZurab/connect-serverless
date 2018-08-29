@@ -2,7 +2,6 @@ export const DictionaryTypeDef = `
   
     extend type Query {
         getDictionary: Dictionary
-        getDictionaryHash: DictionaryHash
     }
     
     type Dictionary {
@@ -21,9 +20,4 @@ export const DictionaryTypeDef = `
                 en: String
                 ru: String
             }
-    
-    type DictionaryHash {
-        status: Boolean!
-        hash: String!
-    }
 `;
