@@ -55,7 +55,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/connect/dev/1534888756871-2018-08-21T21:59:16.871Z/connect.zip"
+                "S3Key": "serverless/connect/dev/1535578131641-2018-08-29T21:28:51.641Z/connect.zip"
               },
               "FunctionName": "connect-dev-backend-freeform-submit",
               "Handler": "src/handler/freeform/backend/submit.handler",
@@ -75,14 +75,14 @@
               "BackendDashfreeformDashsubmitLogGroup"
             ]
           },
-          "BackendDashfreeformDashsubmitLambdaVersionaxXKHS91CQNDM6mOSKKj5wZFDD6BmtKgd0KhHbXBolE": {
+          "BackendDashfreeformDashsubmitLambdaVersiond69fgZNn67iaLjDeW5cF5lNtooP06rjv1macv6nobk": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "BackendDashfreeformDashsubmitLambdaFunction"
               },
-              "CodeSha256": "sMb/aiySsZo1FKAY71T9LJ8gtjJp7kIa1ulZ6UMHit4=",
+              "CodeSha256": "R+hxmVt7ddUW0IAiMVD4yOLFj5oZJ5GVgJq3lZBguTo=",
               "Description": "Some text"
             }
           },
@@ -93,7 +93,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/connect/dev/1534888756871-2018-08-21T21:59:16.871Z/connect.zip"
+                "S3Key": "serverless/connect/dev/1535578131641-2018-08-29T21:28:51.641Z/connect.zip"
               },
               "FunctionName": "connect-dev-test-graphql",
               "Handler": "src/handler/graphql/index.handler",
@@ -106,14 +106,14 @@
               "TestDashgraphqlLogGroup"
             ]
           },
-          "TestDashgraphqlLambdaVersionbRPfm2j7Ir8bWMR8Jtw35XM2Az5G88SqEWYwPpyI": {
+          "TestDashgraphqlLambdaVersionUr7WEwtKPMwckkxMio3N6qyudirAHlwqyjAjmNPQ": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "TestDashgraphqlLambdaFunction"
               },
-              "CodeSha256": "sMb/aiySsZo1FKAY71T9LJ8gtjJp7kIa1ulZ6UMHit4="
+              "CodeSha256": "R+hxmVt7ddUW0IAiMVD4yOLFj5oZJ5GVgJq3lZBguTo="
             }
           },
           "ExampleLambdaFunction": {
@@ -123,7 +123,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/connect/dev/1534888756871-2018-08-21T21:59:16.871Z/connect.zip"
+                "S3Key": "serverless/connect/dev/1535578131641-2018-08-29T21:28:51.641Z/connect.zip"
               },
               "FunctionName": "connect-dev-example",
               "Handler": "src/handler/example.base",
@@ -136,14 +136,14 @@
               "ExampleLogGroup"
             ]
           },
-          "ExampleLambdaVersionrE5LGWhU6ppBqXEchSsfTSRZrPCOzl7IeS4Ueod4Z8": {
+          "ExampleLambdaVersionPCPRIv57QJ4aII1kWi0PU8m8InKYnT29d2b6YgR1Zo": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ExampleLambdaFunction"
               },
-              "CodeSha256": "sMb/aiySsZo1FKAY71T9LJ8gtjJp7kIa1ulZ6UMHit4="
+              "CodeSha256": "R+hxmVt7ddUW0IAiMVD4yOLFj5oZJ5GVgJq3lZBguTo="
             }
           },
           "FrontendDashfreeformDashindexDashpointLambdaFunction": {
@@ -153,7 +153,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/connect/dev/1534888756871-2018-08-21T21:59:16.871Z/connect.zip"
+                "S3Key": "serverless/connect/dev/1535578131641-2018-08-29T21:28:51.641Z/connect.zip"
               },
               "FunctionName": "connect-dev-frontend-freeform-index-point",
               "Handler": "src/handler/freeform/frontend.handler",
@@ -173,14 +173,14 @@
               "FrontendDashfreeformDashindexDashpointLogGroup"
             ]
           },
-          "FrontendDashfreeformDashindexDashpointLambdaVersion07YXqdgGyE2kPhgqhemKlyCzAQF9HFeM9oO5EbPVo": {
+          "FrontendDashfreeformDashindexDashpointLambdaVersionUF6JWRCqFFFGSo68oYAlAo1qeAjQSUKSBqjB4TGUk": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "FrontendDashfreeformDashindexDashpointLambdaFunction"
               },
-              "CodeSha256": "sMb/aiySsZo1FKAY71T9LJ8gtjJp7kIa1ulZ6UMHit4=",
+              "CodeSha256": "R+hxmVt7ddUW0IAiMVD4yOLFj5oZJ5GVgJq3lZBguTo=",
               "Description": "Some text"
             }
           },
@@ -231,25 +231,25 @@
           "BackendDashfreeformDashsubmitLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "BackendDashfreeformDashsubmitLambdaVersionaxXKHS91CQNDM6mOSKKj5wZFDD6BmtKgd0KhHbXBolE"
+              "Ref": "BackendDashfreeformDashsubmitLambdaVersiond69fgZNn67iaLjDeW5cF5lNtooP06rjv1macv6nobk"
             }
           },
           "TestDashgraphqlLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "TestDashgraphqlLambdaVersionbRPfm2j7Ir8bWMR8Jtw35XM2Az5G88SqEWYwPpyI"
+              "Ref": "TestDashgraphqlLambdaVersionUr7WEwtKPMwckkxMio3N6qyudirAHlwqyjAjmNPQ"
             }
           },
           "ExampleLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ExampleLambdaVersionrE5LGWhU6ppBqXEchSsfTSRZrPCOzl7IeS4Ueod4Z8"
+              "Ref": "ExampleLambdaVersionPCPRIv57QJ4aII1kWi0PU8m8InKYnT29d2b6YgR1Zo"
             }
           },
           "FrontendDashfreeformDashindexDashpointLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "FrontendDashfreeformDashindexDashpointLambdaVersion07YXqdgGyE2kPhgqhemKlyCzAQF9HFeM9oO5EbPVo"
+              "Ref": "FrontendDashfreeformDashindexDashpointLambdaVersionUF6JWRCqFFFGSo68oYAlAo1qeAjQSUKSBqjB4TGUk"
             }
           }
         }
@@ -346,7 +346,7 @@
     "artifact": "/Users/zurab/MyWorks/node/connect-serverless/.build/.serverless/connect.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/connect/dev/1534888756871-2018-08-21T21:59:16.871Z",
+    "artifactDirectoryName": "serverless/connect/dev/1535578131641-2018-08-29T21:28:51.641Z",
     "artifact": "connect.zip"
   }
 }

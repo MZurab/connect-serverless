@@ -2,47 +2,70 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91e57552-c321-4991-bcf5-46570b843347" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/handler/freeform/backend/submit-old.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/handler/graphql/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListForModel.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListGlobal.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListShared_.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/functions/connect.functions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/libraries/elementReference/elementReference.library.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/libraries/freeform/freeformElementReference.library.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/modules/db/db.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/modules/db/res/abstract/@enum/db.enum.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/modules/db/res/abstract/@enum/operation-type.enum.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/modules/db/res/abstract/@type/block.type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/modules/db/res/abstract/@type/connection.type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/modules/db/res/abstract/@type/operation.type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/modules/db/res/abstract/@type/variable.type.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/handler/graphql/dictionary/res/@abstract/@type/common.type.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.serverless/cloudformation-template-update-stack.json" beforeDir="false" afterPath="$PROJECT_DIR$/.serverless/cloudformation-template-update-stack.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.serverless/connect.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.serverless/connect.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.serverless/serverless-state.json" beforeDir="false" afterPath="$PROJECT_DIR$/.serverless/serverless-state.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-convert/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/color-convert/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-name/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/color-name/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-name/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/color-name/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-name/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/color-name/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/lodash/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/lodash/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/path-loader/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/path-loader/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/path-loader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/path-loader/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/path-loader/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/path-loader/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/serverless/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/serverless/lib/classes/Variables.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/lib/classes/Variables.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/serverless/lib/classes/Variables.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/lib/classes/Variables.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/index.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/index.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/lib/cors.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/lib/cors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/lib/cors.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/lib/cors.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/lib/method/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/lib/method/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/lib/method/index.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/aws/package/compile/events/apiGateway/lib/method/index.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/create/templates/aws-go/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/create/templates/aws-go/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/platform/platform.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/lib/plugins/platform/platform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/serverless/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/serverless/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serverless/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless.yml" beforeDir="false" afterPath="$PROJECT_DIR$/serverless.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handler/example.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler/example.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handler/freeform/backend/member.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler/freeform/backend/member-old.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handler/freeform/backend/member.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler/freeform/backend/member.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handler/freeform/backend/submit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handler/freeform/backend/submit.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler/freeform/backend/submit.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handler/freeform/frontend.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler/freeform/frontend-old.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handler/freeform/frontend.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler/freeform/frontend.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListForModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListForModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListForObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListForObject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListShared.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListShared.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Element/FreeformElementObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Element/FreeformElementObject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Group/FreeformGroupObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Group/FreeformGroupObject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Member/FreeformMember.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Member/FreeformMember.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Page/FreeformPageObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Page/FreeformPageObject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Row/FreeformRowObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Row/FreeformRowObject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Stepper/FreeformStepper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_freeform/_sub/Stepper/FreeformStepper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/connect_access.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/connect_access.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/connect_auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/connect_auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/connect_market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/connect_market.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/connect_service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/connect_service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.graphql.resolver.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.graphql.resolver.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.graphql.typedef.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.graphql.typedef.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.library.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.library.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.mock.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.mock.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/handler/graphql/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler/graphql/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/aws/amazon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/aws/amazon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/aws/amazon.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/aws/amazon.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/aws/dinamo-old.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/aws/dinamo-old.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/aws/dynamo/dynamo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/aws/dynamo/dynamo.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/aws/dynamo/res/@abstract/@enum/common.enum.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/aws/dynamo/res/@abstract/@enum/common.enum.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/aws/dynamo/res/@abstract/@type/common.type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/aws/dynamo/res/@abstract/@type/common.type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect-page/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect-page/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_access/access.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_access/access.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_access/confirm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_access/confirm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_access/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_access/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_app/app-base.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_app/app-base.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_app/app-onepay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_app/app-onepay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_app/app-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_app/app-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_app/app-sharepay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_app/app-sharepay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_app/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_app/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_balance/balance.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_balance/balance.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_chat/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_chat/chat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_chat/chatOld.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_chat/chatOld.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_dictionary/dictionary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_dictionary/dictionary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_market/market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_market/market.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_onepay/onepay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_onepay/onepay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_page/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_page/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_service/service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_service/service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_sms/sms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_sms/sms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_talk/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_talk/chat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_talk/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_talk/message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/connect_users/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/connect_users/users.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -68,33 +91,33 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="3" />
-          <entry key="json" value="2" />
-          <entry key="ts" value="7" />
+          <entry key="js" value="9" />
+          <entry key="json" value="3" />
+          <entry key="ts" value="21" />
           <entry key="yml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="3" />
-          <entry key="TypeScript" value="7" />
+          <entry key="JSON" value="2" />
+          <entry key="JavaScript" value="9" />
+          <entry key="TypeScript" value="21" />
           <entry key="YAML" value="1" />
           <entry key="tsconfig" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="31" />
+          <entry key="js" value="34" />
           <entry key="json" value="2" />
-          <entry key="ts" value="26" />
+          <entry key="ts" value="2893" />
           <entry key="yml" value="70" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="31" />
-          <entry key="TypeScript" value="26" />
+          <entry key="JavaScript" value="34" />
+          <entry key="TypeScript" value="2893" />
           <entry key="YAML" value="70" />
           <entry key="tsconfig" value="2" />
         </counts>
@@ -108,38 +131,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/handler/db/db.handler.ts">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.library.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="445">
+              <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/handler/freeform/backend/member-old.js">
+        <entry file="file://$PROJECT_DIR$/src/handler/graphql/index-old.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="11" column="15" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="15" />
+            <state relative-caret-position="473">
+              <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/handler/freeform/backend/submit-old.js">
+        <entry file="file://$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.mock.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="210">
+              <caret line="14" column="21" selection-start-line="2" selection-start-column="8" selection-end-line="14" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/handler/freeform/frontend.ts">
+        <entry file="file://$PROJECT_DIR$/src/handler/graphql/dictionary/res/@abstract/@type/common.type.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            <state relative-caret-position="15">
+              <caret line="1" column="41" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -147,53 +176,68 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/handler/graphql/index.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/handler/example.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+            <state relative-caret-position="213">
+              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serverless.yml">
+        <entry file="file://$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.graphql.typedef.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="80" column="10" selection-start-line="80" selection-start-column="10" selection-end-line="80" selection-end-column="10" />
+            <state relative-caret-position="420">
+              <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tsconfig.json">
+        <entry file="file://$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.graphql.resolver.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+            <state relative-caret-position="75">
+              <caret line="5" column="21" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/handler/freeform/backend/submit.ts">
+        <entry file="file://$PROJECT_DIR$/src/input/aws/dynamo/res/@abstract/@type/common.type.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+            <state relative-caret-position="675">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/handler/freeform/backend/member.ts">
+        <entry file="file://$PROJECT_DIR$/src/input/aws/dinamo-old.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="563">
+              <caret line="481" selection-start-line="481" selection-end-line="490" selection-end-column="1" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#!!block;n#DinamoDbAdd#0" />
+                <element signature="n#!!block;n#DinamoDbDel#0" />
+                <element signature="n#!!block;n#_addBy#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/input/aws/dynamo/dynamo.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="202" column="13" selection-start-line="202" selection-start-column="13" selection-end-line="202" selection-end-column="13" />
+              <folding>
+                <element signature="e#1#43#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -202,16 +246,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>GETROOTMODEL</find>
-      <find>savable</find>
-      <find>freeform</find>
-      <find>ts</find>
-      <find>clientData</find>
-      <find>formobject</find>
-      <find>CustomAuthorizerHandler</find>
-      <find>LOG.</find>
-      <find>declaration</find>
-      <find>&quot;compileOnSave&quot;: false,</find>
       <find>noUnusedParameters</find>
       <find>usetAuthType</find>
       <find>CONNECT</find>
@@ -230,10 +264,23 @@
       <find>submit</find>
       <find>handler</find>
       <find>arn:aws:iam::222322594734:user/aws</find>
+      <find>path</find>
+      <find>mergeObject</find>
+      <find>event</find>
+      <find>docClient</find>
+      <find>==</find>
+      <find>addDataWithCreatePathToObject</find>
+      <find>Connect_clearObjectByTypeOf</find>
+      <find>de</find>
+      <find>addByMask</find>
+      <find>checkForMask</find>
+      <find>var</find>
+      <find>get</find>
     </findStrings>
     <replaceStrings>
       <replace>AccessListShared</replace>
       <replace>export function</replace>
+      <replace>==</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -242,8 +289,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/input/firebase/firebase_install.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/input/connect_freeform/_sub/FreeformShared.js" />
         <option value="$PROJECT_DIR$/src/input/aws/sns.js" />
         <option value="$PROJECT_DIR$/src/handler/freeform/frontend.js" />
@@ -276,10 +321,25 @@
         <option value="$PROJECT_DIR$/src/handler/freeform/backend/submit.ts" />
         <option value="$PROJECT_DIR$/src/handler/freeform/backend/member.ts" />
         <option value="$PROJECT_DIR$/src/handler/freeform/frontend.ts" />
-        <option value="$PROJECT_DIR$/src/handler/graphql/index.ts" />
         <option value="$PROJECT_DIR$/tsconfig.json" />
         <option value="$PROJECT_DIR$/serverless.yml" />
         <option value="$PROJECT_DIR$/src/handler/example.ts" />
+        <option value="$PROJECT_DIR$/src/input/connect_dictionary/dictionary.js" />
+        <option value="$PROJECT_DIR$/src/input/aws/aws.js" />
+        <option value="$PROJECT_DIR$/src/input/aws/aws.ts" />
+        <option value="$PROJECT_DIR$/src/input/aws/dinamo.ts" />
+        <option value="$PROJECT_DIR$/src/input/aws/amazon.js" />
+        <option value="$PROJECT_DIR$/src/input/aws/amazon.ts" />
+        <option value="$PROJECT_DIR$/src/input/aws/dynamo.ts" />
+        <option value="$PROJECT_DIR$/src/input/aws/dynamo/res/@abstract/@enum/common.enum.ts" />
+        <option value="$PROJECT_DIR$/src/input/aws/dynamo/res/@abstract/@type/common.type.ts" />
+        <option value="$PROJECT_DIR$/src/input/aws/dynamo/dynamo.ts" />
+        <option value="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.mock.ts" />
+        <option value="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.graphql.typedef.ts" />
+        <option value="$PROJECT_DIR$/src/handler/graphql/index.ts" />
+        <option value="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.graphql.resolver.ts" />
+        <option value="$PROJECT_DIR$/src/handler/graphql/dictionary/res/@abstract/@type/common.type.ts" />
+        <option value="$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.library.ts" />
       </list>
     </option>
   </component>
@@ -303,7 +363,7 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="711" />
+    <option name="x" value="1142" />
     <option name="y" value="23" />
     <option name="width" value="1410" />
     <option name="height" value="1242" />
@@ -343,7 +403,115 @@
               <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="handler" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="graphql" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
+              <item name="graphql" type="462c0819:PsiDirectoryNode" />
+              <item name="dictionary" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
+              <item name="graphql" type="462c0819:PsiDirectoryNode" />
+              <item name="dictionary" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
+              <item name="graphql" type="462c0819:PsiDirectoryNode" />
+              <item name="dictionary" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="@abstract" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
+              <item name="graphql" type="462c0819:PsiDirectoryNode" />
+              <item name="dictionary" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="@abstract" type="462c0819:PsiDirectoryNode" />
+              <item name="@type" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+              <item name="aws" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+              <item name="aws" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+              <item name="aws" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamo" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+              <item name="aws" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamo" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="@abstract" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+              <item name="aws" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamo" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="@abstract" type="462c0819:PsiDirectoryNode" />
+              <item name="@enum" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+              <item name="aws" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamo" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="@abstract" type="462c0819:PsiDirectoryNode" />
+              <item name="@type" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connect-serverless" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connect-serverless" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+              <item name="aws" type="462c0819:PsiDirectoryNode" />
+              <item name="amazon.ts" type="620a8d5e:NestingTreeNode" />
             </path>
           </expand>
           <select />
@@ -364,11 +532,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/input/aws/dynamo" />
       <recent name="$PROJECT_DIR$/src/res/functions" />
       <recent name="$PROJECT_DIR$/src/res/libraries/freeform" />
       <recent name="$PROJECT_DIR$/src/res/modules/db" />
       <recent name="$PROJECT_DIR$/src/res/libraries/elementReference" />
-      <recent name="$PROJECT_DIR$/src/handler/freeform" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -396,15 +564,15 @@
       <workItem from="1529766258140" duration="3879000" />
       <workItem from="1529843035138" duration="26669000" />
       <workItem from="1531588292335" duration="9671000" />
-      <workItem from="1534884447285" duration="3690000" />
+      <workItem from="1534884447285" duration="32478000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43909000" />
+    <option name="totallyTimeSpent" value="72697000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="711" y="23" width="1410" height="1242" extended-state="0" />
+    <frame x="1142" y="23" width="1410" height="1242" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25365496" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -457,68 +625,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/_sub/Form/FreeformFormModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="53" column="40" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/input/firebase/firebase_install.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/input/aws/sns.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="65" column="1" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/aws-lambda/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1605">
-          <caret line="107" column="2" selection-start-line="107" selection-start-column="2" selection-end-line="107" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/aws-lambda/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="721" column="25" selection-start-line="721" selection-start-column="25" selection-end-line="721" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListShared_.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12525">
-          <caret line="835" column="8" selection-start-line="835" selection-start-column="8" selection-end-line="835" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/_sub/AccessList/AccessListForObject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="88" column="25" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/_sub/Member/FreeformMember.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -624,13 +730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/input/connect.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="82" column="44" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/input/connect_freeform/_sub/FreeformShared.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -683,13 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/handler/db/db.handler.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -739,24 +831,171 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/handler/graphql/index.ts">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        <state relative-caret-position="390">
+          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/serverless.yml">
+    <entry file="file://$PROJECT_DIR$/node_modules/apollo-server-lambda/dist/ApolloServer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="80" column="10" selection-start-line="80" selection-start-column="10" selection-end-line="80" selection-end-column="10" />
+        <state relative-caret-position="564">
+          <caret line="61" column="31" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/handler/example.ts">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="4" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/connect.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="428" selection-start-line="428" selection-end-line="428" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/apollo-server-core/dist/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serverless.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="77" column="2" selection-start-line="77" selection-start-column="2" selection-end-line="77" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/connect_dictionary.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/aws/amazon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" selection-start-column="15" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/aws/amazon.ts">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/aws/dynamo/res/@abstract/@enum/common.enum.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/connect_dictionary/dictionary.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/aws/dinamo-old.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="481" selection-start-line="481" selection-end-line="490" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!block;n#DinamoDbAdd#0" />
+            <element signature="n#!!block;n#DinamoDbDel#0" />
+            <element signature="n#!!block;n#_addBy#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/aws/dynamo/res/@abstract/@type/common.type.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/aws/dynamo/dynamo.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="202" column="13" selection-start-line="202" selection-start-column="13" selection-end-line="202" selection-end-column="13" />
+          <folding>
+            <element signature="e#1#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/handler/graphql/index-old.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/handler/graphql/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.graphql.typedef.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/handler/graphql/dictionary/res/@abstract/@type/common.type.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="41" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.mock.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="21" selection-start-line="2" selection-start-column="8" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.graphql.resolver.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/handler/graphql/dictionary/dictionary.library.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,7 +1,7 @@
 var CONNECT   = require('./../connect');
 const LOG     = require('ramman-z-log');
 var FIREBASE  = require("./../firebase/firebase");
-var DINAMO    = require("./../aws/dinamo");
+var DINAMO    = require("../aws/dynamo/dynamo");
 
 var tableMsg      = 'connect-message',
     tableMember   = 'connect-member',

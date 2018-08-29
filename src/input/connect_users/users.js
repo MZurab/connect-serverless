@@ -1,4 +1,4 @@
-var DINAMO  = require("./../aws/dinamo");
+var DINAMO  = require("../aws/dynamo/dynamo");
 const LOG   = require('ramman-z-log');
 const table = "connect-user";
 

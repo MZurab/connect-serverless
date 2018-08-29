@@ -1,4 +1,4 @@
-var DINAMO    = require("./../aws/dinamo");
+var DINAMO    = require("../aws/dynamo/dynamo");
 var CONNECT   = require('./../connect');
 const LOG     = require('ramman-z-log');
 var tableDictionary  = "connect-dictionary";
@@ -10,11 +10,9 @@ function Connect_getDictionary (iNuid,iNlang,iNfunction) {
       uid = iNuid,
       lang = iNlang,
       result=null;
-    LOG.printObject('Connect_getDictionary objForQuery start',objForQuery,typeof(objForQuery));
+
   objForQuery = DINAMO.addByMask({'status':0},'status',objForQuery,'number');
-  LOG.printObject('Connect_getDictionary objForQuery after status',objForQuery,typeof(objForQuery));
   objForQuery = DINAMO.addByMask({'uid':uid},'uid',objForQuery);
-  LOG.printObject('Connect_getDictionary objForQuery after uid',objForQuery,typeof(objForQuery));
   DINAMO.query(objForQuery,function (err,data) {
     LOG.printObject('Connect_getDictionary err',err);
     LOG.printObject('Connect_getDictionary data',data);

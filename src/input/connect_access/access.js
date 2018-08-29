@@ -7,7 +7,7 @@
       example -   ACCESS.checkAccessByRole(123,"market");
 */
 
-var DINAMO    = require("./../aws/dinamo");
+var DINAMO    = require("../aws/dynamo/dynamo");
 var CONNECT   = require('./../connect');
 const LOG     = require('ramman-z-log');
 

@@ -1,5 +1,5 @@
 var CONNECT = require('./../connect');
-var DINAMO  = require("./../aws/dinamo");
+var DINAMO  = require("../aws/dynamo/dynamo");
 const LOG   = require('ramman-z-log');
 
 var table = 'connect-service';

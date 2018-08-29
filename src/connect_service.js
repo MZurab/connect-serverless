@@ -2,7 +2,7 @@ exports.handler = (event, context, callback) => {
   // TODO implement
   const CONNECT = require('./input/connect');
   const LOG     = require('ramman-z-log');
-  const DINAMO  = require("./input/aws/dinamo");
+  const DINAMO  = require("./input/aws/dynamo/dynamo");
   const ACCESS  = require("./input/connect_access/access");
   const SERVICE = require("./input/connect_service/service");
 

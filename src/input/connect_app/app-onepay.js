@@ -1,4 +1,4 @@
-const DINAMO    = require("./../aws/dinamo");
+const DINAMO    = require("../aws/dynamo/dynamo");
 const FILE      = require("./../aws/s3");
 const TEMPLATE  = require("./../connect_template/template");
 

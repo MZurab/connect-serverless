@@ -5,7 +5,7 @@
     @vars input
       var docClient = new AWS.DynamoDB.DocumentClient();
 */
-const AMAZON  = require("./aws");
+const AMAZON  = require("./amazon");
 const AWS     = AMAZON.data;
 const LOG     = require('ramman-z-log');
 

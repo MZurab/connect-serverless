@@ -1,5 +1,5 @@
-const AWS = require("aws-sdk");
-// // AWS.config.update (
+const Amazon = require("aws-sdk");
+// // Amazon.config.update (
 // //
 // // );
-// module.exports.data = AWS;
+// module.exports.data = Amazon;

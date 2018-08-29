@@ -1,7 +1,7 @@
 exports.handler = (event, context, callback) => {
   // TODO implement
   var CONNECT = require('./input/connect');
-  var DINAMO  = require("./input/aws/dinamo");
+  var DINAMO  = require("./input/aws/dynamo/dynamo");
   var ACCESS  = require("./input/connect_access/access");
   const LOG   = require('ramman-z-log');
 
