@@ -6,7 +6,7 @@ export const DictionaryTypeDef = `
     
     type Dictionary {
         status: Boolean!,
-        dictionary: [DictionaryType]!,
+        dictionary: [DictionaryType],
         defaultLanguage: String,
         includedLanguages: [String]!,
         possibleLanguages: [String]!,

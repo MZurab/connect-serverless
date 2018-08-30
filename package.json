@@ -10,6 +10,7 @@
     "firebase-admin": "^5.12.1",
     "graphql": "^0.13.2",
     "lodash": "^4.17.10",
+    "mz-common": "^1.0.0",
     "node-uuid": "^1.4.8",
     "ramman-z-log": "^1.0.149",
     "rxjs": "^6.2.2",

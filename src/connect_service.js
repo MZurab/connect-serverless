@@ -62,7 +62,7 @@ exports.handler = (event, context, callback) => {
         <script type="text/javascript" src="https://cdn.ramman.net/js/min/jquery.countdown.min.js"></script>\
         <script type="text/javascript" src="https://cdn.ramman.net/js/full/sweetalert2.js"></script>\
         <link rel="stylesheet" href="https://cdn.ramman.net/css/min/sweetalert2.min.css">\
-        <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>\
+        <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-old.js"></script>\
         <script type="text/javascript" src="https://cdn.ramman.net/js/full/connect_common.js"></script>\
         <script type="text/javascript" src="https://cdn.ramman.net/js/full/servises/users.js"></script>\
     </head>\
@@ -133,7 +133,7 @@ exports.handler = (event, context, callback) => {
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">\
         <link rel="stylesheet" href="https://cdn.ramman.net/css/full/base.css">\
         <link rel="stylesheet" href="https://cdn.ramman.net/css/full/styleForService.css">\
-        <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>\
+        <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-old.js"></script>\
         <script type="text/javascript" src="https://cdn.ramman.net/js/full/connect_common.js"></script>\
         <script type="text/javascript" src="https://cdn.ramman.net/js/full/servises/users.js"></script>\
         <script type="text/javascript">\

@@ -4,7 +4,7 @@ const LOG     = require('ramman-z-log');
 
 // var FIREBASE  = require("./../firebase/firebase_install");
 // var FADMIN    = FIREBASE.firebase;
-var LFIREBASE = require("./../firebase/firebase");
+var LFIREBASE = require("./../firebase/firebase-old");
 var tableUser = "connect-user";
 
 function addUser (iNdata,iNfunction) {

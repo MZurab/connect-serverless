@@ -1,6 +1,6 @@
 import * as CONNECT from '../../../connect.js'
 import * as LOG from 'ramman-z-log'
-import * as FIREBASE from '../../../firebase/firebase.js'
+import * as FIREBASE from '../../../firebase/firebase-old.js'
 import {AccessListShared} from './AccessListShared.js'
 
 const firestore = FIREBASE.firestore;

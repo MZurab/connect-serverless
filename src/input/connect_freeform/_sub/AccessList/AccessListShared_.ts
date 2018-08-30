@@ -1,5 +1,5 @@
-// import * as CONNECT from '../../../connect.js';
-// import * as FIREBASE from '../../../firebase/firebase.js';
+// import * as CONNECT from '../../../connect-old.js';
+// import * as FIREBASE from '../../../firebase/firebase-old.js';
 // import * as LOG from 'ramman-z-log';
 // import {FreeformShared} from './../FreeformShared.js';
 // import {GlobalStorage} from './../GlobalStorage/GlobalStorage.js';
