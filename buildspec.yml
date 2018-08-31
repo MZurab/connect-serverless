@@ -8,15 +8,15 @@ phases:
       #- apt-get -y install npm
       - node --version
       - npm --version
+      - npm install -g serverless
       - npm install
-      – npm install -g serverless
   build:
     commands:
       - npm --version
       - node --version
   post_build:
     commands:
-      – sls deploy
+      - sls deploy
 
 artifacts:
   files:
