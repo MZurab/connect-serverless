@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91e57552-c321-4991-bcf5-46570b843347" name="Default" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/buildspec.yml" beforeDir="false" afterPath="$PROJECT_DIR$/buildspec.yml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> 62f70cda6b46cdd03e740ed1d97f51f00f9c3287
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -50,19 +54,33 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+<<<<<<< HEAD
           <entry key="gitignore" value="4" />
           <entry key="js" value="50" />
           <entry key="json" value="2" />
           <entry key="ts" value="5641" />
           <entry key="yml" value="120" />
+=======
+          <entry key="gitignore" value="3" />
+          <entry key="js" value="50" />
+          <entry key="json" value="2" />
+          <entry key="ts" value="5641" />
+          <entry key="yml" value="119" />
+>>>>>>> 62f70cda6b46cdd03e740ed1d97f51f00f9c3287
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JavaScript" value="50" />
+<<<<<<< HEAD
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="TypeScript" value="5641" />
           <entry key="YAML" value="120" />
+=======
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="TypeScript" value="5641" />
+          <entry key="YAML" value="119" />
+>>>>>>> 62f70cda6b46cdd03e740ed1d97f51f00f9c3287
           <entry key="tsconfig" value="2" />
         </counts>
       </usages-collector>
@@ -141,8 +159,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/buildspec.yml">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="225">
               <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="17" selection-end-column="17" />
+=======
+            <state relative-caret-position="330">
+              <caret line="22" column="18" lean-forward="true" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+>>>>>>> 62f70cda6b46cdd03e740ed1d97f51f00f9c3287
             </state>
           </provider>
         </entry>
@@ -150,8 +173,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="75">
               <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+=======
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+>>>>>>> 62f70cda6b46cdd03e740ed1d97f51f00f9c3287
             </state>
           </provider>
         </entry>
@@ -272,6 +300,7 @@
         <option value="$PROJECT_DIR$/src/input/firebase/firebase_install.ts" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/buildspec.yml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -368,12 +397,20 @@
       <workItem from="1531588292335" duration="9671000" />
       <workItem from="1534884447285" duration="33913000" />
       <workItem from="1535645347221" duration="597000" />
+<<<<<<< HEAD
       <workItem from="1535647285991" duration="15865000" />
+=======
+      <workItem from="1535647285991" duration="15510000" />
+>>>>>>> 62f70cda6b46cdd03e740ed1d97f51f00f9c3287
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="90594000" />
+=======
+    <option name="totallyTimeSpent" value="90239000" />
+>>>>>>> 62f70cda6b46cdd03e740ed1d97f51f00f9c3287
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -386,9 +423,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="354" y="23" width="1690" height="1242" extended-state="0" />
+<<<<<<< HEAD
     <editor active="true" />
+=======
+>>>>>>> 62f70cda6b46cdd03e740ed1d97f51f00f9c3287
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21662621" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21662621" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -402,7 +442,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32956523" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="8" weight="0.32956523" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49964002" visible="true" weight="0.3573913" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49964002" visible="true" weight="0.3573913" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50035995" side_tool="true" weight="0.3580786" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
@@ -792,6 +832,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
+<<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
@@ -802,6 +843,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="17" selection-end-column="17" />
+=======
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buildspec.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="18" lean-forward="true" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+>>>>>>> 62f70cda6b46cdd03e740ed1d97f51f00f9c3287
         </state>
       </provider>
     </entry>
