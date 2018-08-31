@@ -16,11 +16,11 @@ phases:
     commands:
       - sls deploy
 ### user $env from options of build
-#      – serverless deploy –stage $env –region us-west-2 –verbose
+#      - serverless deploy –stage $env –region us-west-2 –verbose
 
 artifacts:
   files:
-    – serverless.yml
-    – package.json
-    – buildspec.yml
+    - serverless.yml
+    - package.json
+    - buildspec.yml
 discard-paths: yes
