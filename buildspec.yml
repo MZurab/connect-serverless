@@ -3,8 +3,8 @@ version: 0.1
 phases:
   install:
     commands:
-      - apt-get update
-      - apt-get install npm
+      - apt update
+      - apt install npm
 #      – npm install -g serverless
   build:
     commands:
