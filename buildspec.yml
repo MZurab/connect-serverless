@@ -1,0 +1,23 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      – apt-get -y update
+#      – apt-get -y install zip
+      – npm install -g serverless
+      - npm install
+  build:
+    commands:
+#      – dotnet restore
+#      – dotnet publish -c Release -o out
+#      – cd out && zip -r ../publish.zip ./*
+  post_build:
+    commands:
+      – sls deploy
+
+artifacts:
+files:
+  – serverless.yml
+  – publish.zip
+discard-paths: yes

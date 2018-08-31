@@ -2,7 +2,7 @@
 import * as fadmin_ from 'firebase-admin';
 
 // var serviceAccount = require("./connect-9109d-firebase-adminsdk-lytg0-130f89d0ed.json");
-const serviceAccount = {
+const serviceAccount: any = {
     "type": "service_account",
     "project_id": "connect-9109d",
     "private_key_id": "35d26b449256cf5f8b3b4dd6c9d0329fd82b4dcb",
@@ -20,6 +20,7 @@ fadmin_.initializeApp(
         credential: fadmin_.credential.cert(serviceAccount),
         projectId 			    : "connect-9109d",
         storageBucket		    : "connect-9109d.appspot.com",
+        // @ts-ignore
         authDomain			    : "connect-9109d.firebaseapp.com",
         messagingSenderId	    : "737839044422",
         databaseURL             : "https://connect-9109d.firebaseio.com"
