@@ -3,23 +3,23 @@ version: 0.1
 phases:
   install:
     commands:
-      #- apt-get update
-# -y - need for after answer for questions
-      #- apt-get -y install npm
-      - node --version
-      - npm --version
+      - apt-get update
+##      -y - need for after answer for questions
+      - apt-get -y install npm
       - npm install -g serverless
       - npm install
-  build:
-    commands:
-      - npm --version
-      - node --version
+#  build:
+#    commands:
+#      - npm --version
+#      - node --version
   post_build:
     commands:
       - sls deploy
+#      – serverless deploy –stage $env –region us-west-2 –verbose
 
 artifacts:
   files:
     – serverless.yml
-    – publish.zip
+    – package.json
+    – buildspec.yml
 discard-paths: yes
