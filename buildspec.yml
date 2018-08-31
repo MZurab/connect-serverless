@@ -5,7 +5,7 @@ phases:
     commands:
 #      - apt-get update
 ###      -y - need for after answer for questions
-      - apt-get -y install npm
+#      - apt-get -y install npm
       - npm install -g serverless
       - npm install
 #  build:
