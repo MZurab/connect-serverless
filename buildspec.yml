@@ -3,13 +3,15 @@ version: 0.1
 phases:
   install:
     commands:
-      - apt-get update
+      #- apt-get update
 # -y - need for after answer for questions
-      - apt-get -y install npm
+      #- apt-get -y install npm
+    - node --version
+    - npm --version
+    - npm install
   build:
     commands:
       – npm install -g serverless
-      - npm install
   post_build:
     commands:
       – sls deploy
