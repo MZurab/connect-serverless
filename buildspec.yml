@@ -6,10 +6,10 @@ phases:
       #- apt-get update
 # -y - need for after answer for questions
       #- apt-get -y install npm
-    - node --version
-    - npm --version
-    - npm install
-    – npm install -g serverless
+      - node --version
+      - npm --version
+      - npm install
+      – npm install -g serverless
   build:
     commands:
       - npm --version
