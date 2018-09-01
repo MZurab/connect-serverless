@@ -9,7 +9,7 @@ export const DictionaryTypeDef = `
     type Dictionary {
         # The status answer
         status: Boolean!,
-        # The dictionary for client
+        # The dictionary for client -
         dictionary: [DictionaryType],
         defaultLanguage: String,
         includedLanguages: [String]!,
