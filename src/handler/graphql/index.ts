@@ -6,8 +6,8 @@ import { merge } from 'lodash';
 // resolvers
 import {GraphQlResolver} from "./dictionary/dictionary.graphql.resolver";
 import {DictionaryTypeDef} from "./dictionary/dictionary.graphql.typedef";
-import {GraphQlTypeDefGroupAuth} from "./auth/auth.graphql.typedef";
-import {GraphQlAuthGroupResolvers} from "./auth/auth.graphql.resolver";
+import {GraphQlTypeDefGroupAuth} from "./auth/auth.graphql.typedefs";
+import {GraphQlAuthGroupResolvers} from "./auth/auth.graphql.resolvers";
 
 
 // Construct a schema, using GraphQL schema language
