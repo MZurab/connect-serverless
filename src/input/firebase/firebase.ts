@@ -9,9 +9,9 @@ const FADMIN    = fadmin.firebase;
 
 export namespace LFIREBASE {
     import getEmptyObservable = USER.getEmptyObservable;
-    export const    admin = fadmin,
-        database = fadmin.database,
-        firestore = fadmin.firestore;
+    export const admin = fadmin;
+    export const database = fadmin.database;
+    export const firestore = fadmin.firestore;
 
 
     export function getBatchFirestoreDb (db: any) {
