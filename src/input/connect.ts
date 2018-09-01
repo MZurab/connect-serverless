@@ -57,7 +57,7 @@ export namespace Connect {
         return value.join('');
     }
 
-    export function getRandomNubmer (amountChars: number) {
+    export function getRandomNubmer (amountChars?: number) {
         if(typeof(amountChars) !== 'number') amountChars =5;
         return getRandomKeyWithChars(amountChars,"0123456789");
     }
@@ -173,7 +173,7 @@ export namespace Connect {
         return headerFromJsIn['params']['path'];
     }
 
-    export function getIp (iNheaderFromJs: any): string {
+    export function getIp (iNheaderFromJs?: any): string {
         return getFromContext('source-ip',iNheaderFromJs);
     }
 
@@ -288,5 +288,51 @@ export namespace Connect {
         for (var i = 0; i < arr.length; ++i)
             if (arr[i] !== undefined) rv[i] = arr[i];
         return rv;
+    }
+
+    export function sendSms (smsText: string, phone: string, account?: string, translit?: number): Observable<{err: any, response: any}> {
+        // default non translit
+        if(typeof translit != 'number' || translit != 1) translit =0;
+
+        // get header
+        let header, userId;
+        //CHANGE add load from dynamoDb
+        switch (account) {
+            case 'sign':
+                //user -> sign
+                userId = 'a4985557-f610-4e94-be47-f614423c0267';
+                //dynamo base -> login:pswd for uid
+                header = base64_encode("1626q05234fd64x4e718dr:dfarb4");
+                break;
+
+            default:
+                //user -> ramman
+                userId = '4f488a43-b5fd-452d-8e81-66da96156ab8';
+                //dynamo base -> login:pswd for uid
+                header = base64_encode("2626q05234fd64x4e718dq:asdfh43");
+                break;
+        };
+
+        let options = {
+            method: 'POST',
+            url: 'https://ramman.net/api/service/sms/v1/send/' + userId + '/auto',
+            headers:
+                { authorization: 'Basic ' + header,'content-type': 'application/json' },
+            body:
+                { to: { phone: phone },
+                    content: smsText,
+                    translit: translit },
+            json: true
+        };
+
+        return Observable.create(
+            (observer: Observer<{err: any, response: any}>) => {
+                request(options, function (err, response, body) {
+                    observer.next({err, response});
+                    observer.complete();
+                });
+            }
+        )
+
     }
 }

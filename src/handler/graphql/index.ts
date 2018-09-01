@@ -2,39 +2,28 @@ import {Handler} from "aws-lambda";
 import {graphqlLambda} from "../../../node_modules/apollo-server-lambda/dist/lambdaApollo";
 import {makeExecutableSchema} from "graphql-tools";
 import { merge } from 'lodash';
+
+// resolvers
 import {GraphQlResolver} from "./dictionary/dictionary.graphql.resolver";
 import {DictionaryTypeDef} from "./dictionary/dictionary.graphql.typedef";
+import {GraphQlTypeDefGroupAuth} from "./auth/auth.graphql.typedef";
+import {GraphQlAuthGroupResolvers} from "./auth/auth.graphql.resolver";
 
 
 // Construct a schema, using GraphQL schema language
-const typeDefs = `
+const baseTypeDef = `
     type Query {
         _empty: String
     }
-    
-    extend type Query {
-        test: Test
-    }
-
-    type Test {
-        val: String
-    }
 `;
-
-// Provide resolver functions for your schema fields
-const resolvers = {
-    Query: {
-        test: () => { return {"val":"it is test"}}
-    }
-};
 
 
 // @ts-ignore
 const myGraphQLSchema = makeExecutableSchema({
     // add with all types in array
-    typeDefs: [typeDefs, DictionaryTypeDef],
+    typeDefs: [baseTypeDef, DictionaryTypeDef, ...GraphQlTypeDefGroupAuth],
     // add all resolver with lodash method merge
-    resolvers: merge(GraphQlResolver, resolvers),
+    resolvers: merge(GraphQlResolver, ...GraphQlAuthGroupResolvers),
 });
 
 const handler: Handler  = function graphqlHandler (event, context, callback) {
