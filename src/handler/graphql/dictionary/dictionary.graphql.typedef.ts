@@ -1,11 +1,15 @@
 export const DictionaryTypeDef = `
   
     extend type Query {
+        # the schema allows the following query: - Query
         getDictionary: Dictionary
     }
     
+    # the schema allows the following query: - Dictionary
     type Dictionary {
+        # The status answer
         status: Boolean!,
+        # The dictionary for client
         dictionary: [DictionaryType],
         defaultLanguage: String,
         includedLanguages: [String]!,
