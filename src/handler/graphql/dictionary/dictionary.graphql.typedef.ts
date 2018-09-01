@@ -1,7 +1,7 @@
 export const DictionaryTypeDef = `
   
     extend type Query {
-        # the schema allows the following query: - Query
+        # some description
         getDictionary: Dictionary
     }
     
