@@ -22,7 +22,8 @@
     "serverless-plugin-typescript": "^1.1.5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "aws codebuild start-build --project-name Connect-serverless-functions --region eu-west-1"
   },
   "author": "",
   "license": "ISC"
