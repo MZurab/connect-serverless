@@ -5,7 +5,7 @@ export const DictionaryTypeDef = `
         getDictionary: Dictionary
     }
     
-    # the schema allows the following query: - Dictionary
+    # the schema allows the following query - Dictionary
     type Dictionary {
         # The status answer
         status: Boolean!,
