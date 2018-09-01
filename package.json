@@ -1,5 +1,5 @@
 {
-  "name": "connect",
+  "name": "connect-serverless",
   "version": "1.0.0",
   "description": "",
   "main": "handler.js",
