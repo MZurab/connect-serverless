@@ -1,14 +1,18 @@
 import {MzDynamoDb} from "../aws/dynamo/dynamo";
 import {Observable, Observer} from "rxjs";
 import {Connect} from "../connect";
-import {LFIREBASE} from "../firebase/firebase";
+import {Lfirebase} from "../firebase/firebase";
 
 const tableUser = "connect-user";
 let dNameForAdd;
 
 export namespace USER {
 
-    export function getByLoginIndex ( data: {'login' : any, 'pswd' : any} ): Observable<{err: any, data: any}> {
+    import getEmptyObservable = Connect.getEmptyObservable;
+
+    export function getByLoginIndex (data: {'login' : any, 'pswd' : any} ): Observable<{err: any, data: any}> {
+        console.log('getByLoginIndex - data', data);
+
         if ( typeof(data) != 'object' || typeof(data['login']) != 'string') return getEmptyObservable({err: true, data: null});
 
         let login       = (data['login']+"").toLowerCase(),
@@ -25,16 +29,9 @@ export namespace USER {
         if( typeof(data['phone'] )=='string')
             objForQuery = MzDynamoDb.addByMaskFilter (data,'phone',objForQuery);
 
-        return MzDynamoDb.query(objForQuery);
-    }
+        console.log('getByLoginIndex - objForQuery', objForQuery);
 
-    export function getEmptyObservable (result: any = null): Observable<any> {
-        return Observable.create(
-            (observer: Observer<null>) => {
-                observer.next(result);
-                observer.complete();
-            }
-        );
+        return MzDynamoDb.query(objForQuery);
     }
 
     export function getByPhoneIndex (data: {phone: string}): Observable<any> {
@@ -125,7 +122,7 @@ export namespace USER {
                 ).subscribe(
                     (d) => {
                         if (!d.err) {
-                            LFIREBASE.createUser (objectForFirebase).subscribe(
+                            Lfirebase.createUser (objectForFirebase).subscribe(
                                 (d) => {
                                     observer.next(d);
                                     observer.complete();

@@ -1,4 +1,4 @@
-const Amazon = require("aws-sdk");
+const AmazonOld = require("aws-sdk");
 // // Amazon.config.update (
 // //
 // // );

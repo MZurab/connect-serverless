@@ -15,10 +15,8 @@ export namespace Mock {
 
     export namespace Request {
         export const AuthSignIn = {
-            "user":"zurab",
-            "pswd":"1122",
-            "moveType":"1",
-            "type":"signin"
+            "user": "@test-user",
+            "pswd": "@test-pswd"
         }
     }
 }

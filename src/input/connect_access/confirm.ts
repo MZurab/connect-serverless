@@ -22,32 +22,32 @@ export namespace CONFIRM {
         return createToken ( uid, data);
     }
     
-    export function createToken (uid: string, iNdata: any): Observable<{err: any, data: any}> {
+    export function createToken (uid: string, data: any): Observable<{err: any, data: any}> {
         let token     = Connect.getRandomKeyByUuid(),
             iNinfo    = {},
             objForAdd = {},
             time      = Connect.getTime();
         
-        if ( typeof iNdata !== 'object') iNdata = {},iNinfo = {};
-        if ( typeof iNdata['to']       === 'string') objForAdd['to']      = iNdata['to'];
-        if ( typeof iNdata['status']   === 'number')
-            objForAdd['status']  = iNdata['status'];
+        if ( typeof data !== 'object') data = {},iNinfo = {};
+        if ( typeof data['to']       === 'string') objForAdd['to']      = data['to'];
+        if ( typeof data['status']   === 'number')
+            objForAdd['status']  = data['status'];
         else
             objForAdd['status']  = 0;
-        if ( typeof iNdata['type']     === 'string') objForAdd['type']    = iNdata['type'];
-        if ( typeof iNdata['method']   === 'string') objForAdd['method']  = iNdata['method'];
-        if ( typeof iNdata['expired']  === 'number') objForAdd['expired'] = iNdata['expired'];
-        if ( typeof iNdata['code']     === 'string') objForAdd['code']    = iNdata['code'];
+        if ( typeof data['type']     === 'string') objForAdd['type']    = data['type'];
+        if ( typeof data['method']   === 'string') objForAdd['method']  = data['method'];
+        if ( typeof data['expired']  === 'number') objForAdd['expired'] = data['expired'];
+        if ( typeof data['code']     === 'string') objForAdd['code']    = data['code'];
 
         //@< info
-        if ( typeof iNdata['phone']     === 'string' )
-            iNinfo['phone']   = iNdata['phone'];
-        if ( typeof iNdata['device']    === 'string' )
-            iNinfo['device']  = iNdata['device'];
-        if ( typeof iNdata['uagent']    === 'string' )
-            iNinfo['uagent']  = iNdata['uagent'];
-        if ( typeof iNdata['did']    === 'string' ) // did - device id
-            iNinfo['did']  = iNdata['did'];
+        if ( typeof data['phone']     === 'string' )
+            iNinfo['phone']   = data['phone'];
+        if ( typeof data['device']    === 'string' )
+            iNinfo['device']  = data['device'];
+        if ( typeof data['uagent']    === 'string' )
+            iNinfo['uagent']  = data['uagent'];
+        if ( typeof data['did']    === 'string' ) // did - device id
+            iNinfo['did']  = data['did'];
 
         if( Object.keys(iNinfo).length > 0 ) objForAdd['info'] = iNinfo;
         //@> info

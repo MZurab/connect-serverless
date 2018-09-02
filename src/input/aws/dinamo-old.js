@@ -34,7 +34,7 @@ var docClient = new AWS.DynamoDB.DocumentClient({
             if( typeof(iNfunction) == 'function') iNfunction(err, iNdata);
         });
     }
-    module.exports.add = DinamoDbAdd;
+    module.exports.add = DinamoDbAdd;a
     //Dinamo DB delete
     function DinamoDbDel (iNobject,iNfunction) {
         /*

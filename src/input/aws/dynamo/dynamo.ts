@@ -16,14 +16,18 @@ export namespace MzDynamoDb {
     });
 
     export function add (table: string,data: any): Observable<AwsDynamoDefaultResponseType> {
+        console.log('add - table, data', table, data);
         return Observable.create(
             (observer: Observer<AwsDynamoDefaultResponseType>) => {
                 let params = {
                     TableName:table,
                     Item:data
                 };
+                console.log('add - params', params);
+
                 docClient.put(params, function(err, data) {
-                    observer.next({err, data});
+                    console.log('add - err, data', err, data, {err, data: params});
+                    observer.next({err, data: params});
                     observer.complete();
                 });
             }

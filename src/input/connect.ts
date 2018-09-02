@@ -335,4 +335,13 @@ export namespace Connect {
         )
 
     }
+
+    export function getEmptyObservable (result: any = null): Observable<any> {
+        return Observable.create(
+            (observer: Observer<null>) => {
+                observer.next(result);
+                observer.complete();
+            }
+        );
+    }
 }

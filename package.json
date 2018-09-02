@@ -18,8 +18,13 @@
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.7",
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
     "serverless-offline": "^3.25.4",
-    "serverless-plugin-typescript": "^1.1.5"
+    "serverless-plugin-typescript": "^1.1.5",
+    "ts-node": "^7.0.1"
   },
   "scripts": {
     "test": "echo  \"Error: no test specified\" && exit 1",

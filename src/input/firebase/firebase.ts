@@ -3,12 +3,12 @@ import {fadmin} from "./firebase_install";
 import {Observable, Observer} from "rxjs";
 import * as mzCommon from 'mz-common';
 import {map} from "rxjs/operators";
-import {USER} from "../connect_access/user";
 
 const FADMIN    = fadmin.firebase;
 
-export namespace LFIREBASE {
-    import getEmptyObservable = USER.getEmptyObservable;
+export namespace Lfirebase {
+
+    import getEmptyObservable = Connect.getEmptyObservable;
     export const admin = fadmin;
     export const database = fadmin.database;
     export const firestore = fadmin.firestore;
