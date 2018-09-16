@@ -62,7 +62,7 @@ exports.handler = (event, context, callback) => {
           if(matchArray.length == 2) {
               var login = matchArray[0];
               var pswd = matchArray[1];
-              var urlForAddTelegram = 'https://lk.ramman.net/api/device/telegram.php?phone='+login+'&pswd='+pswd+'&telegram_id='+msg.chat.id+'&type=addId';
+              var urlForAddTelegram = 'http://lk.ramman.net/api/device/telegram.php?phone='+login+'&pswd='+pswd+'&telegram_id='+msg.chat.id+'&type=addId';
               CONNECT.getUrlHttpsRequest(urlForAddTelegram,
                 (answer)=>{
                   LOG.printObject('getUrlHttpsRequest answer',answer);
@@ -113,10 +113,10 @@ exports.handler = (event, context, callback) => {
 
 
 /*
-    https://lk.ramman.net/api/device/index.php?device_type=3&phone=" + phoneUrl + "&pswd=" + pswdUrl + "&token=" + tokenUrl + "&name=" + nameUrl + "&type=users_checkAccess&v=1
+    http://lk.ramman.net/api/device/index.php?device_type=3&phone=" + phoneUrl + "&pswd=" + pswdUrl + "&token=" + tokenUrl + "&name=" + nameUrl + "&type=users_checkAccess&v=1
 
 
-    https://lk.ramman.net/api/device/telegram.php?device_type=3&phone=79287377782&pswd=12345678&telegram_id=123456&type=addId
+    http://lk.ramman.net/api/device/telegram.php?device_type=3&phone=79287377782&pswd=12345678&telegram_id=123456&type=addId
     "update_id": 809681869,
         "message": {
             "message_id": 17,

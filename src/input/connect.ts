@@ -6,6 +6,8 @@ import {Observable, Observer} from "rxjs";
 
 export namespace Connect {
 
+    var c1, c2, c3;
+
     export function getUrlHttpsRequest (url: string) {
         return Observable.create(
             (observer: Observer<{error: any, response: any, body: any}>) => {
@@ -123,6 +125,11 @@ export namespace Connect {
         return false;
     }
 
+    export function getBody (iNheaderFromJs?: any): any {
+        let data = getHeader(['*'], iNheaderFromJs);
+        return data && data['data']
+    }
+
     export function getHeader (iNheaderArray: any[],iNheaderFromJs?: any): any {
         let headerFromJsIn;
 
@@ -141,7 +148,7 @@ export namespace Connect {
         return {'data':DATA,'type':TYPE,'header':headerFromJsIn['params']["header"]};
     }
 
-    export function getQueryString (iNheaderFromJs: any): any {
+    export function getQueryString (iNheaderFromJs?: any): any {
         let headerFromJsIn, r;
         if( typeof(iNheaderFromJs) == 'object' )
             headerFromJsIn = iNheaderFromJs;

@@ -4,7 +4,23 @@
     "declaration": false,
     "module": "commonjs",
     "target": "es6",
-    "lib": [ "es6", "dom" ],
+    "lib": [
+      "es6",
+      "dom",
+
+      "esnext",
+      "es5",
+      "es2015.core",
+      "es2015.collection",
+      "es2015.generator",
+      "es2015.iterable",
+      "es2015.promise",
+      "es2015.proxy",
+      "es2015.reflect",
+      "es2015.symbol",
+      "es2015.symbol.wellknown",
+      "esnext.asynciterable"
+    ],
     "moduleResolution": "node",
     "rootDir": "./",
     "sourceMap": true,
@@ -17,7 +33,10 @@
     "preserveConstEnums": true,
     "suppressImplicitAnyIndexErrors": true,
     "forceConsistentCasingInFileNames": true,
-    "noUnusedParameters": false
+    "noUnusedParameters": false,
+
+    "allowUnreachableCode": true,
+    "allowUnusedLabels": true
   },
   "exclude": [ "node_modules", "build", "webpack" ],
   "types": [ "typePatches" ]

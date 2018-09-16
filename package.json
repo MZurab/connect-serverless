@@ -7,14 +7,18 @@
     "@types/lodash": "^4.14.112",
     "apollo-server-lambda": "^2.0.0-xrc.11",
     "aws-sdk": "^2.263.1",
+    "aws-serverless-express": "^3.3.5",
     "firebase-admin": "^5.12.1",
     "graphql": "^0.13.2",
     "lodash": "^4.17.10",
     "mz-common": "^1.0.0",
     "node-uuid": "^1.4.8",
     "ramman-z-log": "^1.0.149",
+    "reflect-metadata": "^0.1.12",
     "rxjs": "^6.2.2",
-    "serverless": "^1.30.3"
+    "serverless": "^1.30.3",
+    "webpack": "^4.17.2",
+    "zone.js": "^0.8.26"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.7",
@@ -22,12 +26,14 @@
     "@types/mocha": "^5.2.5",
     "chai": "^4.1.2",
     "mocha": "^5.2.0",
+    "serverless-mocha-plugin": "^1.8.3",
     "serverless-offline": "^3.25.4",
     "serverless-plugin-typescript": "^1.1.5",
     "ts-node": "^7.0.1"
   },
   "scripts": {
     "test": "echo  \"Error: no test specified\" && exit 1",
+    "deploy": "sls deploy",
     "build": "aws codebuild start-build --project-name Connect-serverless-functions --region eu-west-1"
   },
   "author": "",
