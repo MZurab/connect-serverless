@@ -3,6 +3,29 @@ import {Connect} from "../../../input/connect";
 import {RequestInputType} from "./res/@library/whatsapp-chat-api-com-provider/res/@type/@request-input/request-input.type";
 import {WhatsappChatApiComProvider} from "./res/@library/whatsapp-chat-api-com-provider";
 
+
+// function safeGetPhone (phones: string | number) {
+//     phones = phones + '';
+//     //
+//     let phonesArray = phones.replace(/[^0-9\,]/g,'').split(',') || [],
+//         r = []
+//
+//     for (let phone of phonesArray) {
+//         if (phone.length > 10) {
+//             // @ts-ignore
+//             r.push(`7${phone.slice(1)}`);
+//         } else {
+//             // @ts-ignore
+//             r.push(phone.slice(1));
+//
+//         }
+//         phone.slice(1)
+//     }
+//
+//     return r;
+//
+// }
+
 const handler: Handler = (event: any, context: Context, callback: Callback) => {
     // set header
     Connect.setHeader(event);
@@ -42,16 +65,17 @@ const handler: Handler = (event: any, context: Context, callback: Callback) => {
 
             //get
             let content = message.body,
-                isJoin  = content.toLowerCase().indexOf('подкл'),
-                isHello = content.toLowerCase().indexOf('прив');
+                isJoin  = content.toLowerCase().indexOf('подкл')!== -1,
+                isHello = content.toLowerCase().indexOf('прив')!== -1,
+                isActiv = content.toLowerCase().indexOf('актив') !== -1;
 
-            if ( isJoin === -1 && isHello === -1) {
-                console.log('INPUT-MESSAGE 3 FALSE', isJoin, isHello);
+            if ( !isJoin && !isHello && !isActiv) {
                 return;
             }
 
-            let matchAuthor  = message.author.match(/[0-9]+/g),
-                match   = (isJoin > -1) ? content.replace(/[^0-9]/g,'').match(/[0-9]+/g) : message.author.match(/[0-9]+/g),
+            let promiseAll = [],
+                matchAuthor  = message.author.match(/[0-9]+/g),
+                match   = ((isJoin || isActiv) && !isHello) ? content.replace(/[^0-9]/g,'').match(/[0-9]+/g) : message.author.match(/[0-9]+/g),
                 phone   = (match && match[0]) || '',
                 author = (matchAuthor && matchAuthor[0]) || '';
 
@@ -61,14 +85,51 @@ const handler: Handler = (event: any, context: Context, callback: Callback) => {
             if (
                 phone.length === 11
             ) {
-                // подключить сообщение
-                WhatsappChatApiComProvider.sendTo1dnevnikForActiveToWhatsappInput(phone, author).subscribe(
-                    (r) => {
-                        console.log('INPUT-MESSAGE 5  send', JSON.stringify(r) );
-                        context.succeed({status: r});
-                    }
-                )
+                if (isJoin || isHello) {
+                    // подключить сообщение
+                    // @ts-ignore
+                    promiseAll.push(WhatsappChatApiComProvider.sendTo1dnevnikForActiveToWhatsappInput(phone, author).toPromise());
+                } else if (isActiv) {
+                    let msgToAuthor = `Номер ${phone} отправлен на возможность добавления. Спасибо.`,
+                        msg = 'Уважаемый родитель! Вам будут приходить оценки Ваших детей на этот номер. Просим добавить этот номер в контакты Вашего телефона.';
+                    // подключить сообщение
+                    // @ts-ignore
+                    promiseAll.push(WhatsappChatApiComProvider.sendTo1dnevnikForActiveToWhatsappInput(phone, phone).toPromise());
+                    //     .subscribe(
+                    //     (r) => {
+                    //         console.log('INPUT-MESSAGE 5  send', JSON.stringify(r) );
+                    //
+                    //         let msg = 'Уважаемый родитель. Вам будут приходить оценки Ваших детей на этот номер.';
+                    //
+                    //         let promise = WhatsappChatApiComProvider.sendMessage( msg, phone).toPromise();
+                    //         context.succeed({status: r});
+                    //     }
+                    // );
+                    // @ts-ignore
+                    promiseAll.push(WhatsappChatApiComProvider.sendMessage( msg, phone).toPromise());
+                    // @ts-ignore
+                    promiseAll.push(WhatsappChatApiComProvider.sendMessage( msgToAuthor, author).toPromise());
+
+
+
+
+                    // WhatsappChatApiComProvider.sendTo1dnevnikForActiveToWhatsappInput(phone, author).subscribe(
+                    //     (r) => {
+                    //         console.log('INPUT-MESSAGE 5  send', JSON.stringify(r) );
+                    //         context.succeed({status: r});
+                    //     }
+                    // )
+                }
             }
+
+            Promise.all(promiseAll).then(
+                () => {
+                    context.succeed({status: true});
+                },
+                () => {
+                    context.succeed({status: true});
+                }
+            )
         }
     } else if (
         msgType == 'createMsg' &&
@@ -89,6 +150,7 @@ const handler: Handler = (event: any, context: Context, callback: Callback) => {
                 // send message
                 console.log('CREATE-MESSAGE 1 - ADD phone', phone );
                 let promise = WhatsappChatApiComProvider.sendMessage( msg, phone).toPromise();
+                // @ts-ignore
                 resultPromises.push(promise);
                 // subscribe(
                 //     (r) => {
